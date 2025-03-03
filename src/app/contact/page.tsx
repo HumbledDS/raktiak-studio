@@ -325,7 +325,7 @@ export default function Contact() {
             {[
               {
                 question: "Quel est votre délai de réponse ?",
-                answer: "Je m'engage à répondre à toutes les demandes dans un délai de 24 heures ouvrées."
+                answer: "Je m&apos;engage à répondre à toutes les demandes dans un délai de 24 heures ouvrées."
               },
               {
                 question: "Comment se déroule la première consultation ?",
@@ -333,7 +333,7 @@ export default function Contact() {
               },
               {
                 question: "Quels sont les modes de paiement acceptés ?",
-                answer: "J'accepte les paiements par virement bancaire et PayPal. Un acompte de 30% est demandé au démarrage du projet."
+                answer: "J&apos;accepte les paiements par virement bancaire et PayPal. Un acompte de 30% est demandé au démarrage du projet."
               },
               {
                 question: "Proposez-vous des services de maintenance ?",

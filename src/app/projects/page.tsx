@@ -185,7 +185,7 @@ export default function Projects() {
               Mes réalisations
             </h1>
             <p className="text-xl text-[#F5F5F5]/80 mb-8">
-              Découvrez une sélection de projets web que j'ai réalisés pour des clients de divers secteurs d'activité.
+              Découvrez une sélection de projets web que j&apos;ai réalisés pour des clients de divers secteurs d&apos;activité.
             </p>
           </div>
         </div>
@@ -395,7 +395,7 @@ export default function Projects() {
               
               {activeProject.testimonial && (
                 <div className="glass rounded-xl p-4 border border-[#8A2BE2]/20">
-                  <p className="text-[#F5F5F5]/70 italic mb-3">&quot;{activeProject.testimonial.text}&quot;</p>
+                  <p className="text-[#F5F5F5]/70 italic mb-3">&ldquo;{activeProject.testimonial.text}&rdquo;</p>
                   <div className="text-right">
                     <p className="font-semibold text-[#40E0D0]">{activeProject.testimonial.author}</p>
                     <p className="text-sm text-[#F5F5F5]/50">{activeProject.testimonial.role}</p>

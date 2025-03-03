@@ -30,13 +30,13 @@ export default function About() {
             <div className="w-full md:w-2/3">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">À propos de moi</h1>
               <p className="text-xl mb-6 text-[#F5F5F5]/80">
-                Bonjour, je suis <span className="text-[#40E0D0] font-semibold">Babacar GUEYE</span>, développeur fullstack passionné par la création d'expériences web innovantes.
+                Bonjour, je suis <span className="text-[#40E0D0] font-semibold">Babacar GUEYE</span>, développeur fullstack passionné par la création d&apos;expériences web innovantes.
               </p>
               <p className="text-[#F5F5F5]/70 mb-6">
                 Basé à Paris, je conçois et développe des sites web et applications sur mesure qui allient esthétique moderne et fonctionnalités robustes. Mon objectif est de transformer vos idées en solutions digitales performantes qui répondent parfaitement à vos besoins.
               </p>
               <p className="text-[#F5F5F5]/70">
-                Avec une approche centrée sur l'utilisateur et un souci constant de la qualité, je m'engage à livrer des projets qui dépassent vos attentes et qui contribuent réellement à la croissance de votre activité.
+                Avec une approche centrée sur l&apos;utilisateur et un souci constant de la qualité, je m&apos;engage à livrer des projets qui dépassent vos attentes et qui contribuent réellement à la croissance de votre activité.
               </p>
             </div>
           </div>
@@ -60,13 +60,13 @@ export default function About() {
                 period: "2021-2023",
                 title: "Développeur Fullstack",
                 company: "Entreprise précédente",
-                description: "Développement d'applications web complexes, optimisation des performances et expérience utilisateur."
+                description: "Développement d&apos;applications web complexes, optimisation des performances et expérience utilisateur."
               },
               {
                 period: "2019-2021",
                 title: "Développeur Frontend",
                 company: "Autre entreprise",
-                description: "Création d'interfaces utilisateur modernes et responsives, intégration avec des API REST."
+                description: "Création d&apos;interfaces utilisateur modernes et responsives, intégration avec des API REST."
               },
               {
                 period: "2018-2019",
@@ -89,7 +89,7 @@ export default function About() {
                   <div className="text-[#40E0D0] font-semibold mb-1">{experience.period}</div>
                   <h3 className="text-xl font-bold mb-2">{experience.title}</h3>
                   <div className="text-[#F5F5F5]/80 mb-3">{experience.company}</div>
-                  <p className="text-[#F5F5F5]/70">{experience.description}</p>
+                  <div className="text-[#F5F5F5]/70">{experience.description}</div>
                 </div>
               </div>
             ))}
@@ -195,7 +195,7 @@ export default function About() {
       {/* Section Centres d'intérêt */}
       <section className="py-12 px-6">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Centres d'intérêt</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Centres d&apos;intérêt</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
@@ -222,7 +222,7 @@ export default function About() {
             {[
               {
                 title: "Qualité et excellence",
-                description: "Je m'engage à livrer un travail de la plus haute qualité, en portant une attention particulière aux détails."
+                description: "Je m&apos;engage à livrer un travail de la plus haute qualité, en portant une attention particulière aux détails."
               },
               {
                 title: "Communication transparente",
@@ -230,7 +230,7 @@ export default function About() {
               },
               {
                 title: "Innovation constante",
-                description: "Je reste à l'affût des dernières technologies et tendances pour proposer des solutions innovantes."
+                description: "Je reste à l&apos;affût des dernières technologies et tendances pour proposer des solutions innovantes."
               }
             ].map((value, index) => (
               <div key={index} className="glass rounded-xl p-6 border border-[#8A2BE2]/20">
@@ -248,7 +248,7 @@ export default function About() {
         <div className="container mx-auto relative z-10 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à collaborer ensemble?</h2>
           <p className="text-xl text-[#F5F5F5]/80 mb-8 max-w-2xl mx-auto">
-            Si mon profil correspond à vos besoins, n'hésitez pas à me contacter pour discuter de votre projet.
+            Si mon profil correspond à vos besoins, n&apos;hésitez pas à me contacter pour discuter de votre projet.
           </p>
           <a 
             href="/contact" 

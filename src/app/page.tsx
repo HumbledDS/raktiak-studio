@@ -186,7 +186,7 @@ export default function Home() {
             stats={[
               { value: 35, suffix: "+", label: "Projets réalisés" },
               { value: 28, suffix: "", label: "Clients satisfaits" },
-              { value: 5, suffix: "", label: "Années d'expérience" },
+              { value: 5, suffix: "", label: "Années d&apos;expérience" },
               { value: 98, suffix: "%", label: "Taux de satisfaction" }
             ]}
           />
@@ -212,7 +212,7 @@ export default function Home() {
                   role: "Agence de communication"
                 },
                 {
-                  text: "Notre système de commande en ligne a triplé notre chiffre d'affaires. Babacar a vraiment compris nos besoins et a livré au-delà de nos attentes.",
+                  text: "Notre système de commande en ligne a triplé notre chiffre d&apos;affaires. Babacar a vraiment compris nos besoins et a livré au-delà de nos attentes.",
                   author: "Les Douceurs de Jeanne",
                   role: "Restauration"
                 }
