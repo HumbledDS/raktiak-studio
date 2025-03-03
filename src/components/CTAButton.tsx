@@ -1,24 +1,26 @@
 "use client";
 
 import Link from "next/link";
+import useWindowSize from "@/hooks/useWindowSize";
 
 interface CTAButtonProps {
-  text?: string;
+  text: string;
+  mobileText?: string;
   href: string;
   className?: string;
 }
 
-export default function CTAButton({ 
-  text = "Propose-moi ton projet", 
-  href = "/contact",
-  className = ""
-}: CTAButtonProps) {
+export default function CTAButton({ text, mobileText, href, className = "" }: CTAButtonProps) {
+  const { width } = useWindowSize();
+  const isMobile = width !== undefined && width < 640;
+  const displayText = isMobile && mobileText ? mobileText : text;
+
   return (
     <Link 
       href={href} 
-      className={`px-6 py-3 bg-[#8A2BE2] hover:bg-[#8A2BE2]/80 rounded-full text-white text-center transition-all hover:shadow-[0_0_15px_rgba(138,43,226,0.5)] ${className}`}
+      className={`px-6 py-3 bg-[#8A2BE2] hover:bg-[#8A2BE2]/80 rounded-lg transition-colors ${className}`}
     >
-      {text}
+      {displayText}
     </Link>
   );
 } 

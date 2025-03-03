@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import ScrollToTop from "@/components/ScrollToTop";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Définition des polices
+const inter = Inter({ 
   subsets: ["latin"],
+  variable: "--font-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
-  title: "RakTiak Studio | Développeur Fullstack",
-  description: "Babacar GUEYE - Développeur Fullstack à Paris. Création de sites web et applications sur mesure pour votre entreprise.",
-  keywords: ["développeur web", "fullstack", "Paris", "site web", "application", "freelance"],
+  title: "RakTiak Studio | Développement Web & Design",
+  description: "Création de sites web et applications sur mesure pour donner vie à vos projets digitaux avec élégance et performance.",
 };
 
 export default function RootLayout({
@@ -28,7 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${inter.variable} ${robotoMono.variable}`}>
+        <ScrollToTop />
         <Navbar />
         <main>
           {children}
