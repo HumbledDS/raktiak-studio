@@ -136,7 +136,7 @@ export default function Services() {
                 "Intégration Google Maps",
                 "Optimisation SEO de base",
                 "Responsive design",
-                "Formation à l'utilisation"
+                "Formation à l&apos;utilisation"
               ]}
               excludedFeatures={[
                 "Système de réservation",
@@ -153,13 +153,13 @@ export default function Services() {
               description="Boutique en ligne complète pour vendre vos produits et développer votre activité commerciale."
               features={[
                 "Catalogue de produits",
-                "Panier d'achat",
+                "Panier d&apos;achat",
                 "Système de paiement sécurisé",
                 "Gestion des stocks",
                 "Tableau de bord admin",
                 "Optimisation SEO de base",
                 "Responsive design",
-                "Formation à l'utilisation"
+                "Formation à l&apos;utilisation"
               ]}
               image="/services/ecommerce.jpg"
               popular={true}
@@ -169,7 +169,7 @@ export default function Services() {
             <ServiceCard 
               title="Application Web Personnalisée"
               price="À partir de 1500€"
-              description="Solution sur mesure adaptée à vos besoins spécifiques et à votre secteur d'activité."
+              description="Solution sur mesure adaptée à vos besoins spécifiques et à votre secteur d&apos;activité."
               features={[
                 "Analyse des besoins",
                 "Conception UX/UI",
@@ -177,7 +177,7 @@ export default function Services() {
                 "Fonctionnalités personnalisées",
                 "Tests approfondis",
                 "Déploiement",
-                "Formation à l'utilisation",
+                "Formation à l&apos;utilisation",
                 "Documentation technique"
               ]}
               image="/services/application-web.jpg"
@@ -215,7 +215,7 @@ export default function Services() {
               {
                 title: "Formation",
                 price: "200€",
-                description: "Session de 3h pour maîtriser votre interface d'administration.",
+                description: "Session de 3h pour maîtriser votre interface d&apos;administration.",
                 icon: <span className="text-3xl">👨‍🏫</span>
               },
               {
@@ -252,12 +252,12 @@ export default function Services() {
               {
                 step: "Étape 2",
                 title: "Proposition et devis",
-                description: "Élaboration d'une proposition détaillée avec planning et devis précis."
+                description: "Élaboration d&apos;une proposition détaillée avec planning et devis précis."
               },
               {
                 step: "Étape 3",
                 title: "Design et maquettage",
-                description: "Création de maquettes pour visualiser l'interface avant développement."
+                description: "Création de maquettes pour visualiser l&apos;interface avant développement."
               },
               {
                 step: "Étape 4",
@@ -322,7 +322,7 @@ export default function Services() {
               },
               {
                 question: "Puis-je modifier mon site moi-même après la livraison ?",
-                answer: "Oui, tous mes sites sont livrés avec un système d'administration intuitif. Je propose également une formation pour vous permettre de gérer votre contenu en toute autonomie."
+                answer: "Oui, tous mes sites sont livrés avec un système d&apos;administration intuitif. Je propose également une formation pour vous permettre de gérer votre contenu en toute autonomie."
               },
               {
                 question: "Proposez-vous des services sur mesure non listés ?",
@@ -330,7 +330,7 @@ export default function Services() {
               },
               {
                 question: "Que se passe-t-il si je ne suis pas satisfait du résultat ?",
-                answer: "Votre satisfaction est ma priorité. Je travaille de manière itérative avec des points de validation réguliers pour m'assurer que le projet correspond à vos attentes. Des révisions sont incluses dans chaque offre."
+                answer: "Votre satisfaction est ma priorité. Je travaille de manière itérative avec des points de validation réguliers pour m&apos;assurer que le projet correspond à vos attentes. Des révisions sont incluses dans chaque offre."
               }
             ].map((faq, index) => (
               <div key={index} className="glass rounded-xl p-6 border border-[#8A2BE2]/20">
@@ -348,7 +348,7 @@ export default function Services() {
         <div className="container mx-auto relative z-10 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à donner vie à votre projet ?</h2>
           <p className="text-xl text-[#F5F5F5]/80 mb-8 max-w-2xl mx-auto">
-            Contactez-moi dès aujourd'hui pour discuter de vos besoins et obtenir un devis personnalisé.
+            Contactez-moi dès aujourd&apos;hui pour discuter de vos besoins et obtenir un devis personnalisé.
           </p>
           <CTAButton 
             text="Propose-moi ton projet" 
