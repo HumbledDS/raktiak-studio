@@ -27,18 +27,18 @@ export default function Home() {
               <p className="text-[#F5F5F5]/70 mb-8">
                 Développeur fullstack basé à Paris, je conçois et développe des sites web et applications qui allient esthétique moderne et fonctionnalités robustes.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-row gap-3">
                 <CTAButton 
                   text="Découvrir mes projets" 
                   mobileText="Mes projets"
                   href="/projects" 
-                  className="flex items-center justify-center gap-2 text-sm sm:text-base py-2 sm:py-3"
+                  className="flex-1 flex items-center justify-center gap-2 text-sm py-3"
                 />
                 <CTAButton 
                   text="Discutons de votre projet" 
                   mobileText="Me contacter"
                   href="/contact" 
-                  className="bg-transparent border border-[#8A2BE2] hover:bg-[#8A2BE2]/20 flex items-center justify-center gap-2 text-sm sm:text-base py-2 sm:py-3"
+                  className="flex-1 bg-transparent border border-[#8A2BE2] hover:bg-[#8A2BE2]/20 flex items-center justify-center gap-2 text-sm py-3"
                 />
               </div>
             </div>
@@ -46,7 +46,7 @@ export default function Home() {
               <div className="relative aspect-square max-w-md mx-auto">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#8A2BE2] to-[#40E0D0] opacity-20 blur-3xl"></div>
                 <Image 
-                  src="/hero-image.png" 
+                  src="/projects/hero_image.png" 
                   alt="Développement web" 
                   width={500}
                   height={500}
@@ -125,22 +125,22 @@ export default function Home() {
                 {
                   title: "E-commerce",
                   description: "Boutique en ligne avec +200% de conversion",
-                  image: "/projects/ecommerce-thumb.jpg"
+                  image: "/projects/ecommerce-mereh.png"
                 },
                 {
                   title: "Fast-Food",
                   description: "Site de commande en ligne avec livraison intégrée",
-                  image: "/projects/food-thumb.jpg"
+                  image: "/projects/food-thumb3.png"
                 },
                 {
                   title: "Boulangerie",
                   description: "Vitrine digitale et système de réservation",
-                  image: "/projects/bakery-thumb.jpg"
+                  image: "/projects/food-thumb2.png"
                 },
                 {
                   title: "Salon de beauté",
                   description: "Plateforme de prise de RDV et gallerie interactive",
-                  image: "/projects/beauty-thumb.jpg"
+                  image: "/projects/beauty-thumb.png"
                 }
               ].map((project, index) => (
                 <Link 
@@ -149,15 +149,17 @@ export default function Home() {
                   className="group"
                 >
                   <div className="glass rounded-xl overflow-hidden border border-[#8A2BE2]/20 hover:border-[#40E0D0]/50 transition-all h-full">
-                    <div className="relative h-48">
+                    <div className="relative h-48 overflow-hidden">
                       <Image 
                         src={project.image} 
                         alt={project.title}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span className="text-white">Voir le projet</span>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <span className="text-white font-medium flex items-center gap-2">
+                          Voir le projet <FaArrowRight size={14} />
+                        </span>
                       </div>
                     </div>
                     <div className="p-6">

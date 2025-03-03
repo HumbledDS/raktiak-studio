@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaExternalLinkAlt, FaFilter, FaTimes } from "react-icons/fa";
+import { FaExternalLinkAlt, FaFilter, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 interface Project {
   id: string;
@@ -43,7 +43,7 @@ const projects: Project[] = [
       "Réduction de 70% des no-shows",
       "Augmentation de 25% du panier moyen"
     ],
-    images: ["/projects/beauty-1.jpg", "/projects/beauty-2.jpg", "/projects/beauty-3.jpg"],
+    images: ["/projects/beauty-thumb.png", "/projects/beauty-thumb2.png", "/projects/beauty-thumb3.png"],
     link: "#",
     testimonial: {
       text: "Grâce à RakTiak Studio, notre salon a fait un bond dans l'ère numérique. Le système de réservation a transformé notre organisation et nos clients adorent la facilité d'utilisation.",
@@ -70,7 +70,7 @@ const projects: Project[] = [
       "Réduction des erreurs de commande de 95%",
       "Temps de traitement des commandes réduit de 40%"
     ],
-    images: ["/projects/food-1.jpg", "/projects/food-2.jpg", "/projects/food-3.jpg"],
+    images: ["/projects/food-thumb2.png", "/projects/food-thumb2.png", "/projects/food-thumb3.png"],
     link: "#",
     testimonial: {
       text: "L'application développée par Babacar a révolutionné notre service de livraison. Nos clients apprécient la facilité de commande et notre équipe gagne un temps précieux.",
@@ -97,7 +97,7 @@ const projects: Project[] = [
       "Meilleure organisation de la production",
       "Visibilité locale améliorée de 60%"
     ],
-    images: ["/projects/bakery-1.jpg", "/projects/bakery-2.jpg", "/projects/bakery-3.jpg"],
+    images: ["/projects/food-thumb3.png", "/projects/bakery-thumb2.jpg", "/projects/bakery-thumb3.jpg"],
     link: "#",
     testimonial: {
       text: "Notre boulangerie a gagné en notoriété grâce au site développé par RakTiak Studio. Le système de précommande nous permet de mieux gérer notre production et de réduire le gaspillage.",
@@ -124,7 +124,7 @@ const projects: Project[] = [
       "Réduction du taux d'abandon du panier de 35%",
       "Augmentation du temps passé sur le site de 60%"
     ],
-    images: ["/projects/fashion-1.jpg", "/projects/fashion-2.jpg", "/projects/fashion-3.jpg"],
+    images: ["/projects/ecommerce-mereh.png", "/projects/ecommerce-mereh.png", "/projects/ecommerce-mereh.png"],
     link: "#",
     testimonial: {
       text: "Notre boutique en ligne a connu une croissance exceptionnelle depuis son lancement. Les fonctionnalités innovantes ont vraiment séduit nos clients et nous démarquent de la concurrence.",
@@ -151,7 +151,7 @@ const projects: Project[] = [
       "Expansion géographique sans bureaux physiques",
       "Réduction des coûts administratifs de 30%"
     ],
-    images: ["/projects/accounting-1.jpg", "/projects/accounting-2.jpg", "/projects/accounting-3.jpg"],
+    images: ["/projects/dentist-thumb1.png", "/projects/dentist-thumb2.png", "/projects/dentist-thumb3.png"],
     link: "#",
     testimonial: {
       text: "La plateforme développée par Babacar nous a permis de moderniser notre cabinet et d'offrir un service à distance de qualité. Nos clients apprécient particulièrement la simplicité d'utilisation.",
@@ -228,14 +228,14 @@ export default function Projects() {
                   setCurrentImageIndex(0);
                 }}
               >
-                <div className="relative h-48">
+                <div className="relative h-48 overflow-hidden">
                   <Image 
                     src={project.images[0]} 
                     alt={project.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                     <div>
                       <h3 className="text-xl font-bold text-white">{project.title}</h3>
                       <p className="text-[#40E0D0]">{project.category}</p>
@@ -286,7 +286,35 @@ export default function Projects() {
                 <FaTimes />
               </button>
               
-              {/* Image navigation */}
+              {/* Image navigation buttons */}
+              {activeProject.images.length > 1 && (
+                <>
+                  <button 
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center text-white hover:bg-black/80 transition-all"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentImageIndex((prev) => 
+                        prev === 0 ? activeProject.images.length - 1 : prev - 1
+                      );
+                    }}
+                  >
+                    <FaChevronLeft />
+                  </button>
+                  <button 
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center text-white hover:bg-black/80 transition-all"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentImageIndex((prev) => 
+                        prev === activeProject.images.length - 1 ? 0 : prev + 1
+                      );
+                    }}
+                  >
+                    <FaChevronRight />
+                  </button>
+                </>
+              )}
+              
+              {/* Image indicators */}
               {activeProject.images.length > 1 && (
                 <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
                   {activeProject.images.map((_, index) => (
