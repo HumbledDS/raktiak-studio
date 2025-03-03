@@ -59,7 +59,7 @@ export default function TestimonialSlider({ testimonials, speed = 60 }: Testimon
             style={{ width: `${100 / allTestimonials.length}%` }}
           >
             <div className="glass rounded-xl p-5 md:p-6 border border-[#8A2BE2]/20 h-full hover:border-[#40E0D0]/50 hover:shadow-[0_0_20px_rgba(64,224,208,0.3)] transition-all duration-300">
-              <p className="text-[#F5F5F5]/70 italic mb-4 md:mb-6 text-sm md:text-base line-clamp-6 md:line-clamp-none">"{testimonial.text}"</p>
+              <p className="text-[#F5F5F5]/70 italic mb-4 md:mb-6 text-sm md:text-base line-clamp-6 md:line-clamp-none">&quot;{testimonial.text}&quot;</p>
               <div>
                 <p className="font-semibold text-[#40E0D0] text-sm md:text-base">{testimonial.author}</p>
                 <p className="text-xs md:text-sm text-[#F5F5F5]/50">{testimonial.role}</p>

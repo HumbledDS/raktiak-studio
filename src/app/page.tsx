@@ -230,7 +230,7 @@ export default function Home() {
           <div className="container mx-auto relative z-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à donner vie à votre projet ?</h2>
             <p className="text-xl text-[#F5F5F5]/80 mb-8 max-w-2xl mx-auto">
-              Contactez-moi dès aujourd'hui pour discuter de vos besoins et obtenir un devis personnalisé.
+              Contactez-moi dès aujourd&apos;hui pour discuter de vos besoins et obtenir un devis personnalisé.
             </p>
             <CTAButton 
               text="Propose-moi ton projet" 

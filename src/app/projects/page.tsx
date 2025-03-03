@@ -395,7 +395,7 @@ export default function Projects() {
               
               {activeProject.testimonial && (
                 <div className="glass rounded-xl p-4 border border-[#8A2BE2]/20">
-                  <p className="text-[#F5F5F5]/70 italic mb-3">"{activeProject.testimonial.text}"</p>
+                  <p className="text-[#F5F5F5]/70 italic mb-3">&quot;{activeProject.testimonial.text}&quot;</p>
                   <div className="text-right">
                     <p className="font-semibold text-[#40E0D0]">{activeProject.testimonial.author}</p>
                     <p className="text-sm text-[#F5F5F5]/50">{activeProject.testimonial.role}</p>

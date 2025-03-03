@@ -52,7 +52,7 @@ export default function TestimonialCarousel({ testimonials }: TestimonialCarouse
             style={{ width: `${100 / allTestimonials.length}%` }}
           >
             <div className="glass rounded-xl p-6 border border-[#8A2BE2]/20 h-full">
-              <p className="text-[#F5F5F5]/70 italic mb-6">"{testimonial.text}"</p>
+              <p className="text-[#F5F5F5]/70 italic mb-3">&quot;{testimonial.text}&quot;</p>
               <div>
                 <p className="font-semibold text-[#40E0D0]">{testimonial.author}</p>
                 <p className="text-sm text-[#F5F5F5]/50">{testimonial.role}</p>

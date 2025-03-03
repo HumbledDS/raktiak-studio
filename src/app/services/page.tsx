@@ -326,7 +326,7 @@ export default function Services() {
               },
               {
                 question: "Proposez-vous des services sur mesure non listés ?",
-                answer: "Absolument ! Chaque projet est unique et je peux adapter mes services à vos besoins spécifiques. N'hésitez pas à me contacter pour discuter de votre projet particulier."
+                answer: "Absolument ! Chaque projet est unique et je peux adapter mes services à vos besoins spécifiques. N&apos;hésitez pas à me contacter pour discuter de votre projet et obtenir un devis personnalisé."
               },
               {
                 question: "Que se passe-t-il si je ne suis pas satisfait du résultat ?",
