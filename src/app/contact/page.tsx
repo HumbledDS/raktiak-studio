@@ -20,7 +20,7 @@ export default function Contact() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [, setError] = useState<string | null>(null);
+  const [submitError, setSubmitError] = useState("");
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
