@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import CTAButton from "@/components/CTAButton";
-import Counter from "@/components/Counter";
 import ScrollReveal from "@/components/ScrollReveal";
 import CounterSection from "@/components/CounterSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
