@@ -36,6 +36,7 @@ export default function Contact() {
       setSubmitSuccess(true);
       setTimeout(() => setSubmitSuccess(false), 5000);
     } catch (error) {
+      console.error("Error submitting form:", error);
       setSubmitError("Une erreur est survenue lors de l'envoi du formulaire. Veuillez réessayer.");
     } finally {
       setIsSubmitting(false);
