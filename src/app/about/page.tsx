@@ -192,7 +192,7 @@ export default function About() {
         </div>
       </section>
       
-      {/* Section Centres d'intérêt */}
+      {/* Section Centres d&apos;intérêt */}
       <section className="py-12 px-6">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Centres d&apos;intérêt</h2>
