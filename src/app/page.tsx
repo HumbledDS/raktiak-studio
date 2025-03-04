@@ -124,22 +124,22 @@ export default function Home() {
               {[
                 {
                   title: "E-commerce",
-                  description: "Boutique en ligne avec +200% de conversion",
+                  description: "Boutique en ligne avec +200% de conversion pour produits digitaux & E-books",
                   image: "/projects/ecommerce-mereh.png"
                 },
                 {
                   title: "Fast-Food",
-                  description: "Site de commande en ligne avec livraison intégrée",
-                  image: "/projects/food-thumb3.png"
-                },
-                {
-                  title: "Boulangerie",
-                  description: "Vitrine digitale et système de réservation",
+                  description: "Site pour un Kebabier Fast Food avec le Menu intégré, SEO Google, Ads Facebook / Meta",
                   image: "/projects/food-thumb2.png"
                 },
                 {
+                  title: "Boulangerie",
+                  description: "Vitrine digitale pour une boulangerie SEO Google et Galerie d'images",
+                  image: "/projects/food-thumb3.png"
+                },
+                {
                   title: "Salon de beauté",
-                  description: "Plateforme de prise de RDV et gallerie interactive",
+                  description: "Vitrine pour un salon de beauté, Présentation de services avec Plateforme de prise de RDV intégrée",
                   image: "/projects/beauty-thumb.png"
                 }
               ].map((project, index) => (
@@ -185,9 +185,9 @@ export default function Home() {
           </div>
           <CounterSection 
             stats={[
-              { value: 35, suffix: "+", label: "Projets réalisés" },
-              { value: 28, suffix: "", label: "Clients satisfaits" },
-              { value: 5, suffix: "", label: "Années d'expérience" },
+              { value: 13, suffix: "+", label: "Projets réalisés" },
+              { value: 12, suffix: "", label: "Clients satisfaits" },
+              { value: 3, suffix: "", label: "Années d'expérience" },
               { value: 98, suffix: "%", label: "Taux de satisfaction" }
             ]}
           />
