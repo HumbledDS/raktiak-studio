@@ -294,20 +294,20 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Disponibilité</h3>
-                      <p className="text-[#F5F5F5]/70">Lundi - Vendredi, 9h - 18h</p>
+                      <p className="text-[#F5F5F5]/70">Lundi - Dimanche, 9h - 19h</p>
                     </div>
                   </div>
                 </div>
                 
                 <div className="mt-10">
                   <h3 className="font-semibold mb-4">Délai de réponse</h3>
-                  <p className="text-[#F5F5F5]/70">Je m&apos;engage à répondre à toutes les demandes dans un délai de 24 heures ouvrées.</p>
+                  <p className="text-[#F5F5F5]/70">Je m'engage à répondre à toutes les demandes dans un délai de 24 heures ouvrées.</p>
                 </div>
                 
                 <div className="mt-10">
                   <h3 className="font-semibold mb-4">Première consultation</h3>
                   <p className="text-[#F5F5F5]/70">
-                    La première consultation de 30 minutes est offerte pour discuter de votre projet et évaluer vos besoins.
+                    La première consultation sera pour discuter de votre projet et évaluer vos besoins.
                   </p>
                 </div>
               </div>
@@ -325,7 +325,7 @@ export default function Contact() {
             {[
               {
                 question: "Quel est votre délai de réponse ?",
-                answer: "Je m&apos;engage à répondre à toutes les demandes dans un délai de 24 heures ouvrées."
+                answer: "Je m'engage à répondre à toutes les demandes dans un délai de 24 heures ouvrées."
               },
               {
                 question: "Comment se déroule la première consultation ?",
@@ -333,7 +333,7 @@ export default function Contact() {
               },
               {
                 question: "Quels sont les modes de paiement acceptés ?",
-                answer: "J&apos;accepte les paiements par virement bancaire et PayPal. Un acompte de 30% est demandé au démarrage du projet."
+                answer: "J'accepte les paiements par virement bancaire et PayPal. Un acompte de 30% est demandé au démarrage du projet."
               },
               {
                 question: "Proposez-vous des services de maintenance ?",
