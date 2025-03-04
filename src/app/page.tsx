@@ -16,7 +16,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Transformez votre <span className="text-[#40E0D0] animate-glow">vision</span> en réalité digitale
+                Transformons votre <span className="text-[#40E0D0] animate-glow">vision</span> en réalité digitale !
               </h1>
               <div className="mb-6">
                 <p className="text-xl text-[#F5F5F5]/80">
@@ -24,7 +24,8 @@ export default function Home() {
                 </p>
               </div>
               <p className="text-[#F5F5F5]/70 mb-8">
-                Développeur fullstack basé à Paris, je conçois et développe des sites web et applications qui allient esthétique moderne et fonctionnalités robustes.
+                Développeur fullstack & Cloud/Data Engineer basé à Paris, je conçois et développe des sites web et applications qui allient esthétique moderne et fonctionnalités robustes.
+              
               </p>
               <div className="flex flex-row gap-3">
                 <CTAButton 
@@ -186,7 +187,7 @@ export default function Home() {
             stats={[
               { value: 35, suffix: "+", label: "Projets réalisés" },
               { value: 28, suffix: "", label: "Clients satisfaits" },
-              { value: 5, suffix: "", label: "Années d&apos;expérience" },
+              { value: 5, suffix: "", label: "Années d'expérience" },
               { value: 98, suffix: "%", label: "Taux de satisfaction" }
             ]}
           />
@@ -212,7 +213,7 @@ export default function Home() {
                   role: "Agence de communication"
                 },
                 {
-                  text: "Notre système de commande en ligne a triplé notre chiffre d&apos;affaires. Babacar a vraiment compris nos besoins et a livré au-delà de nos attentes.",
+                  text: "Notre système de commande en ligne a triplé notre chiffre d'affaires. Babacar a vraiment compris nos besoins et a livré au-delà de nos attentes.",
                   author: "Les Douceurs de Jeanne",
                   role: "Restauration"
                 }
@@ -230,7 +231,7 @@ export default function Home() {
           <div className="container mx-auto relative z-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à donner vie à votre projet ?</h2>
             <p className="text-xl text-[#F5F5F5]/80 mb-8 max-w-2xl mx-auto">
-              Contactez-moi dès aujourd&apos;hui pour discuter de vos besoins et obtenir un devis personnalisé.
+              Contactez-moi dès aujourd'hui pour discuter de vos besoins et obtenir un devis personnalisé.
             </p>
             <CTAButton 
               text="Propose-moi ton projet" 
