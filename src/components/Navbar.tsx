@@ -38,7 +38,7 @@ export default function Navbar() {
   // Variantes d'animation pour les liens du menu mobile
   const linkVariants = {
     hidden: { opacity: 0, x: 20 },
-    visible: (i) => ({
+    visible: (i: number) => ({
       opacity: 1,
       x: 0,
       transition: {
