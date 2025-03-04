@@ -136,7 +136,7 @@ export default function Services() {
                 "Intégration Google Maps",
                 "Optimisation SEO de base",
                 "Responsive design",
-                "Formation à l&apos;utilisation"
+                "Formation à l'utilisation"
               ]}
               excludedFeatures={[
                 "Système de réservation",
@@ -153,13 +153,13 @@ export default function Services() {
               description="Boutique en ligne complète pour vendre vos produits et développer votre activité commerciale."
               features={[
                 "Catalogue de produits",
-                "Panier d&apos;achat",
+                "Panier d'achat",
                 "Système de paiement sécurisé",
                 "Gestion des stocks",
                 "Tableau de bord admin",
                 "Optimisation SEO de base",
                 "Responsive design",
-                "Formation à l&apos;utilisation"
+                "Formation à l'utilisation"
               ]}
               image="/services/ecommerce.jpg"
               popular={true}
@@ -169,7 +169,7 @@ export default function Services() {
             <ServiceCard 
               title="Application Web Personnalisée"
               price="À partir de 1500€"
-              description="Solution sur mesure adaptée à vos besoins spécifiques et à votre secteur d&apos;activité."
+              description="Solution sur mesure adaptée à vos besoins spécifiques et à votre secteur d'activité."
               features={[
                 "Analyse des besoins",
                 "Conception UX/UI",
@@ -177,7 +177,7 @@ export default function Services() {
                 "Fonctionnalités personnalisées",
                 "Tests approfondis",
                 "Déploiement",
-                "Formation à l&apos;utilisation",
+                "Formation à l'utilisation",
                 "Documentation technique"
               ]}
               image="/services/application-web.jpg"
@@ -215,7 +215,7 @@ export default function Services() {
               {
                 title: "Formation",
                 price: "200€",
-                description: "Session de 3h pour maîtriser votre interface d&apos;administration.",
+                description: "Session de 3h pour maîtriser votre interface d'administration.",
                 icon: <span className="text-3xl">👨‍🏫</span>
               },
               {
@@ -237,66 +237,76 @@ export default function Services() {
         </div>
       </section>
       
-      {/* Process */}
-      <section className="py-12 px-6">
+      {/* Section Processus de travail */}
+      <section className="py-24 px-6">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Mon processus de travail</h2>
+          <h2 className="text-3xl font-bold mb-16 text-center">Mon processus de travail</h2>
           
-          <div className="relative border-l-2 border-[#8A2BE2] ml-4 md:ml-[calc(50%-1px)] pl-8 md:pl-0">
-            {[
-              {
-                step: "Étape 1",
-                title: "Consultation initiale",
-                description: "Discussion approfondie pour comprendre vos besoins, objectifs et vision."
-              },
-              {
-                step: "Étape 2",
-                title: "Proposition et devis",
-                description: "Élaboration d&apos;une proposition détaillée avec planning et devis précis."
-              },
-              {
-                step: "Étape 3",
-                title: "Design et maquettage",
-                description: "Création de maquettes pour visualiser l&apos;interface avant développement."
-              },
-              {
-                step: "Étape 4",
-                title: "Développement",
-                description: "Codage et intégration des fonctionnalités selon les spécifications."
-              },
-              {
-                step: "Étape 5",
-                title: "Tests et validation",
-                description: "Vérification approfondie pour garantir qualité et performance."
-              },
-              {
-                step: "Étape 6",
-                title: "Mise en ligne",
-                description: "Déploiement et configuration finale pour rendre votre site accessible."
-              },
-              {
-                step: "Étape 7",
-                title: "Suivi et support",
-                description: "Accompagnement post-lancement pour assurer votre satisfaction."
-              }
-            ].map((process, index) => (
-              <div 
-                key={index} 
-                className={`mb-12 relative ${
-                  index % 2 === 0 ? "md:ml-[calc(50%+2rem)]" : "md:mr-[calc(50%+2rem)] md:text-right"
-                }`}
-              >
-                <div className={`absolute top-0 ${
-                  index % 2 === 0 ? "md:-left-[calc(2rem+10px)]" : "md:-right-[calc(2rem+10px)]"
-                } -left-[calc(1rem+1px)] w-5 h-5 rounded-full bg-[#8A2BE2]`}></div>
-                
-                <div className="glass rounded-xl p-6 border border-[#8A2BE2]/20">
-                  <div className="text-[#40E0D0] font-semibold mb-1">{process.step}</div>
-                  <h3 className="text-xl font-bold mb-2">{process.title}</h3>
-                  <p className="text-[#F5F5F5]/70">{process.description}</p>
+          <div className="relative max-w-3xl mx-auto">
+            {/* Ligne verticale */}
+            <div className="absolute left-[15px] md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#8A2BE2] to-[#40E0D0] transform md:-translate-x-1/2"></div>
+            
+            {/* Étapes */}
+            <div className="space-y-24">
+              {[
+                {
+                  step: "Étape 1",
+                  title: "Consultation initiale",
+                  description: "Discussion approfondie pour comprendre vos besoins et objectifs."
+                },
+                {
+                  step: "Étape 2",
+                  title: "Proposition et devis",
+                  description: "Élaboration d'une proposition détaillée avec planning et devis précis."
+                },
+                {
+                  step: "Étape 3",
+                  title: "Design et maquettage",
+                  description: "Création de maquettes pour visualiser l'interface avant développement."
+                },
+                {
+                  step: "Étape 4",
+                  title: "Développement",
+                  description: "Développement de votre projet avec des points d'étape réguliers."
+                },
+                {
+                  step: "Étape 5",
+                  title: "Tests et optimisation",
+                  description: "Phase de tests approfondis et optimisations finales."
+                },
+                {
+                  step: "Étape 6",
+                  title: "Livraison et formation",
+                  description: "Mise en ligne et formation à l'utilisation de votre solution."
+                }
+              ].map((item, index) => (
+                <div 
+                  key={index}
+                  className={`relative flex items-center gap-8 ${
+                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
+                >
+                  {/* Point sur la timeline */}
+                  <div className="absolute left-0 md:left-1/2 w-8 h-8 bg-[#0A0A0A] border-4 border-[#8A2BE2] rounded-full transform md:-translate-x-1/2 z-10"></div>
+                  
+                  {/* Contenu */}
+                  <div className={`flex-1 ${
+                    index % 2 === 0 
+                      ? 'md:pr-16 pl-16 md:pl-0 text-left' 
+                      : 'md:pl-16 pl-16 md:text-right'
+                  }`}>
+                    <div className="glass rounded-xl p-6 border border-[#8A2BE2]/20 hover:border-[#40E0D0]/50 transition-all">
+                      <span className="text-sm text-[#40E0D0] font-medium">{item.step}</span>
+                      <h3 className="text-xl font-bold mt-2 mb-3">{item.title}</h3>
+                      <p className="text-[#F5F5F5]/70">{item.description}</p>
+                    </div>
+                  </div>
+                  
+                  {/* Espace pour l'autre côté */}
+                  <div className="hidden md:block flex-1"></div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -322,15 +332,15 @@ export default function Services() {
               },
               {
                 question: "Puis-je modifier mon site moi-même après la livraison ?",
-                answer: "Oui, tous mes sites sont livrés avec un système d&apos;administration intuitif. Je propose également une formation pour vous permettre de gérer votre contenu en toute autonomie."
+                answer: "Oui, tous mes sites sont livrés avec un système d'administration intuitif. Je propose également une formation pour vous permettre de gérer votre contenu en toute autonomie."
               },
               {
                 question: "Proposez-vous des services sur mesure non listés ?",
-                answer: "Absolument ! Chaque projet est unique et je peux adapter mes services à vos besoins spécifiques. N&apos;hésitez pas à me contacter pour discuter de votre projet et obtenir un devis personnalisé."
+                answer: "Absolument ! Chaque projet est unique et je peux adapter mes services à vos besoins spécifiques. N'hésitez pas à me contacter pour discuter de votre projet et obtenir un devis personnalisé."
               },
               {
                 question: "Que se passe-t-il si je ne suis pas satisfait du résultat ?",
-                answer: "Votre satisfaction est ma priorité. Je travaille de manière itérative avec des points de validation réguliers pour m&apos;assurer que le projet correspond à vos attentes. Des révisions sont incluses dans chaque offre."
+                answer: "Votre satisfaction est ma priorité. Je travaille de manière itérative avec des points de validation réguliers pour m'assurer que le projet correspond à vos attentes. Des révisions sont incluses dans chaque offre."
               }
             ].map((faq, index) => (
               <div key={index} className="glass rounded-xl p-6 border border-[#8A2BE2]/20">
@@ -348,7 +358,7 @@ export default function Services() {
         <div className="container mx-auto relative z-10 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à donner vie à votre projet ?</h2>
           <p className="text-xl text-[#F5F5F5]/80 mb-8 max-w-2xl mx-auto">
-            Contactez-moi dès aujourd&apos;hui pour discuter de vos besoins et obtenir un devis personnalisé.
+            Contactez-moi dès aujourd'hui pour discuter de vos besoins et obtenir un devis personnalisé.
           </p>
           <CTAButton 
             text="Propose-moi ton projet" 
