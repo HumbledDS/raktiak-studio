@@ -244,58 +244,58 @@ export default function About() {
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-16 text-center">Centres d'intérêt</h2>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {[
                 {
-                  icon: <FaBook className="text-3xl" />,
+                  icon: <FaBook className="text-4xl" />,
                   title: "Lecture",
                   description: "Passionné de science-fiction et d'ouvrages techniques"
                 },
                 {
-                  icon: <FaGamepad className="text-3xl" />,
+                  icon: <FaGamepad className="text-4xl" />,
                   title: "Gaming",
                   description: "Amateur de jeux de stratégie et de RPG"
                 },
                 {
-                  icon: <FaMusic className="text-3xl" />,
+                  icon: <FaMusic className="text-4xl" />,
                   title: "Musique",
                   description: "Production musicale et découverte de nouveaux genres"
                 },
                 {
-                  icon: <FaPlane className="text-3xl" />,
+                  icon: <FaPlane className="text-4xl" />,
                   title: "Voyage",
                   description: "Exploration de nouvelles cultures et destinations"
                 },
                 {
-                  icon: <FaCamera className="text-3xl" />,
+                  icon: <FaCamera className="text-4xl" />,
                   title: "Photographie",
                   description: "Capture de moments et paysages urbains"
                 },
                 {
-                  icon: <FaRunning className="text-3xl" />,
+                  icon: <FaRunning className="text-4xl" />,
                   title: "Sport",
                   description: "Pratique de la musculation et du running"
                 }
               ].map((interest, index) => (
                 <motion.div
                   key={index}
-                  className="glass rounded-xl p-6 border border-[#8A2BE2]/20 hover:border-[#40E0D0]/50 transition-all group"
+                  className="glass rounded-xl p-8 border border-[#8A2BE2]/20 hover:border-[#40E0D0]/50 transition-all group"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
+                  whileHover={{ y: -5, scale: 1.02 }}
                 >
                   <div className="flex flex-col items-center text-center">
-                    <div className="mb-4 p-3 rounded-full bg-gradient-to-br from-[#8A2BE2]/20 to-[#40E0D0]/20 group-hover:from-[#8A2BE2]/30 group-hover:to-[#40E0D0]/30 transition-all">
+                    <div className="mb-6 p-4 rounded-full bg-gradient-to-br from-[#8A2BE2]/20 to-[#40E0D0]/20 group-hover:from-[#8A2BE2]/30 group-hover:to-[#40E0D0]/30 transition-all">
                       <span className="text-[#40E0D0] group-hover:scale-110 transition-transform duration-300 inline-block">
                         {interest.icon}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold mb-2 text-white group-hover:text-[#40E0D0] transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-[#40E0D0] transition-colors">
                       {interest.title}
                     </h3>
-                    <p className="text-[#F5F5F5]/70 text-sm">
+                    <p className="text-[#F5F5F5]/70 text-base">
                       {interest.description}
                     </p>
                   </div>
