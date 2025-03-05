@@ -72,8 +72,8 @@ export default function Home() {
                   icon: "💻"
                 },
                 {
-                  title: "UI/UX Design",
-                  description: "Interfaces élégantes et intuitives qui offrent une expérience utilisateur exceptionnelle sur tous les appareils.",
+                  title: "Shopify",
+                  description: "Création de boutiques Shopify sur mesure avec des thèmes personnalisés et des fonctionnalités spécifiques.",
                   icon: "🎨"
                 },
                 {
@@ -203,17 +203,17 @@ export default function Home() {
             <TestimonialSlider 
               testimonials={[
                 {
-                  text: "Babacar a transformé ma vision en un site e-commerce qui convertit exceptionnellement bien. Son design moderne et son attention aux détails ont fait toute la différence.",
+                  text: "Babacar a transformé ma vision en un site e-commerce qui convertit exceptionnellement bien au plaisir de mes abonnés. Son design moderne et son attention aux détails ont fait toute la différence.",
                   author: "Merehcation",
-                  role: "Influenceuse E-commerce"
+                  role: "Influenceuse Voyage"
                 },
                 {
                   text: "Collaborer avec RakTiak Studio a été une révélation. Notre site est maintenant à la hauteur de notre créativité, avec une expérience utilisateur fluide et intuitive.",
                   author: "Comjam",
-                  role: "Agence de communication"
+                  role: "Agence de communication digitale"
                 },
                 {
-                  text: "Notre système de commande en ligne a triplé notre chiffre d'affaires. Babacar a vraiment compris nos besoins et a livré au-delà de nos attentes.",
+                  text: "Notre système de commande en ligne a triplé notre chiffre d'affaires. Babacar a vraiment compris nos besoins et a livré au-delà de nos attentes et ça dans un temps record.",
                   author: "Les Douceurs de Jeanne",
                   role: "Restauration"
                 }

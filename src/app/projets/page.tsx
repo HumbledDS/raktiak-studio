@@ -25,8 +25,8 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: "luxebeauty",
-    title: "LuxeBeauty",
+    id: "MaisonKeylore",
+    title: "Maison Keylore",
     client: "Salon de beauté",
     category: "Beauté",
     technologies: ["Next.js", "Tailwind CSS", "Supabase"],
@@ -48,7 +48,7 @@ const projects: Project[] = [
     testimonial: {
       text: "Grâce à RakTiak Studio, notre salon a fait un bond dans l'ère numérique. Le système de réservation a transformé notre organisation et nos clients adorent la facilité d'utilisation.",
       author: "Sophie Martin",
-      role: "Directrice, LuxeBeauty"
+      role: "Directrice, Maison Keylore"
     }
   },
   {
@@ -82,8 +82,8 @@ const projects: Project[] = [
     id: "maitreboulanger",
     title: "MaîtreBoulanger",
     client: "Boulangerie artisanale",
-    category: "Restauration",
-    technologies: ["WordPress", "WooCommerce", "CSS personnalisé"],
+    category: "Commerce local",
+    technologies: ["Next.js", "Tailwind CSS", "Google Analytics"],
     description: "Site vitrine élégant avec système de précommande et blog de recettes pour une boulangerie artisanale primée.",
     features: [
       "Catalogue de produits avec filtres",
@@ -97,8 +97,7 @@ const projects: Project[] = [
       "Meilleure organisation de la production",
       "Visibilité locale améliorée de 60%"
     ],
-    images: ["/projects/food-thumb3.png", "/projects/bakery-thumb2.jpg", "/projects/bakery-thumb3.jpg"],
-    link: "#",
+    images: ["/projects/bakery-thumb1.jpg", "/projects/bakery-thumb2.jpg", "/projects/bakery-thumb3.jpg"],
     testimonial: {
       text: "Notre boulangerie a gagné en notoriété grâce au site développé par RakTiak Studio. Le système de précommande nous permet de mieux gérer notre production et de réduire le gaspillage.",
       author: "Jean Lefevre",
@@ -106,57 +105,113 @@ const projects: Project[] = [
     }
   },
   {
-    id: "modefusion",
-    title: "ModeFusion",
-    client: "Boutique de vêtements",
+    id: "merehcation",
+    title: "Merehcation E-book",
+    client: "Influence Voyage",
     category: "E-commerce",
-    technologies: ["Next.js", "MongoDB", "AWS"],
-    description: "Boutique en ligne de vêtements avec expérience d'achat immersive et fonctionnalités avancées de personnalisation.",
+    technologies: ["Shopify", "Liquid", "DigitalProducts"],
+    description: "E-book de voyage avec expérience d'achat immersive et fonctionnalités avancées de personnalisation.",
     features: [
-      "Visualisation 3D des produits",
-      "Recommandations personnalisées basées sur l'IA",
-      "Essayage virtuel",
-      "Système de fidélité multi-niveaux",
-      "Intégration avec les réseaux sociaux"
+      "Visualisation des produits",
+      "Page d'accueil avec Video Background",
+      "Section avec carrousel de Vlog Youtube",
+      "Integration Reseaux Sociaux",
+      "Page Produit avec gestion d'avis",
+      "Personalisation complete avec charte visuelle",
+      "Campagne de mailing de relance"
+
     ],
     results: [
-      "Taux de conversion de 5.8%",
-      "Réduction du taux d'abandon du panier de 35%",
-      "Augmentation du temps passé sur le site de 60%"
+      "Taux de conversion forte de 5.8%",
+      "Taux d'abandon du panier faible de 1.2%",
+      
     ],
     images: ["/projects/ecommerce-mereh.png", "/projects/ecommerce-mereh.png", "/projects/ecommerce-mereh.png"],
     link: "#",
     testimonial: {
       text: "Notre boutique en ligne a connu une croissance exceptionnelle depuis son lancement. Les fonctionnalités innovantes ont vraiment séduit nos clients et nous démarquent de la concurrence.",
-      author: "Emma Blanc",
-      role: "CEO, ModeFusion"
+      author: "Meredithe",
+      role: "Propriétaire, Merehcation"
+    }
+  },
+  
+  {
+    id: "fleuretsens",
+    title: "Fleur & Sens",
+    client: "Fleuriste artisanal",
+    category: "Commerce local",
+    technologies: ["Next.js", "Tailwind CSS", "Google Analytics"],
+    description: "Site vitrine élégant pour un fleuriste local, mettant en valeur leurs créations florales et services événementiels.",
+    features: [
+      "Galerie photo des créations",
+      "Section événements spéciaux",
+      "Formulaire de demande de devis",
+      "Intégration Instagram",
+      "Optimisation SEO local"
+    ],
+    results: [
+      "Augmentation des commandes événementielles de 40%",
+      "Visibilité locale améliorée",
+      "Meilleure présence sur les réseaux sociaux"
+    ],
+    images: ["/projects/fleuriste-1.png", "/projects/fleuriste-2.png", "/projects/fleuriste-3.png"],
+    testimonial: {
+      text: "Le site capture parfaitement l'essence de notre boutique. Nos clients apprécient particulièrement la galerie photos et la facilité de contact pour les événements.",
+      author: "Marie Laurent",
+      role: "Propriétaire, Fleur & Sens"
     }
   },
   {
-    id: "conseilsplus",
-    title: "ConseilsPlus",
-    client: "Cabinet d'expertise comptable",
+    id: "coachvitalite",
+    title: "Coach Vitalité",
+    client: "Coach sportif indépendant",
     category: "Services",
-    technologies: ["Vue.js", "Node.js", "PostgreSQL"],
-    description: "Plateforme de consultation en ligne pour experts-comptables, permettant la gestion des clients, des documents et des rendez-vous.",
+    technologies: ["Shopify", "Liquid", "Mailchimp"],
+    description: "Plateforme de coaching en ligne avec vente de programmes personnalisés et e-books de nutrition et musculation.",
     features: [
-      "Système de visioconférence intégré",
-      "Partage de documents sécurisé",
-      "Signature électronique",
-      "Tableau de bord analytique",
-      "Facturation automatisée"
+      "Boutique en ligne pour e-books et programmes",
+      "Blog fitness et nutrition",
+      "Newsletter automatisée",
+      "Espace membre sécurisé",
+      "Système de paiement intégré"
     ],
     results: [
-      "Digitalisation complète du processus client",
-      "Expansion géographique sans bureaux physiques",
-      "Réduction des coûts administratifs de 30%"
+      "Vente de 500+ e-books en 3 mois",
+      "Construction d'une liste email de 2000+ abonnés",
+      "Revenus passifs établis"
     ],
-    images: ["/projects/dentist-thumb1.png", "/projects/dentist-thumb2.png", "/projects/dentist-thumb3.png"],
+    images: ["/projects/coach-1.png", "/projects/coach-2.png", "/projects/coach-3.png"],
     link: "#",
     testimonial: {
-      text: "La plateforme développée par Babacar nous a permis de moderniser notre cabinet et d'offrir un service à distance de qualité. Nos clients apprécient particulièrement la simplicité d'utilisation.",
-      author: "Philippe Moreau",
-      role: "Associé principal, ConseilsPlus"
+      text: "RakTiak Studio a créé exactement ce dont j'avais besoin : une plateforme simple mais efficace pour vendre mes programmes et interagir avec ma communauté.",
+      author: "Marc Dubois",
+      role: "Fondateur, Coach Vitalité"
+    }
+  },
+  {
+    id: "cabinetjuridique",
+    title: "Cabinet Martin & Associés",
+    client: "Cabinet d'avocats",
+    category: "Services",
+    technologies: ["WordPress", "Calendly", "Google Workspace"],
+    description: "Site professionnel pour un cabinet d'avocats, avec prise de rendez-vous en ligne et ressources juridiques.",
+    features: [
+      "Présentation des domaines d'expertise",
+      "Système de rendez-vous en ligne",
+      "Blog juridique",
+      "Formulaire de contact sécurisé",
+      "Espace ressources clients"
+    ],
+    results: [
+      "Augmentation des prises de rendez-vous de 60%",
+      "Réduction du temps administratif",
+      "Meilleur référencement local"
+    ],
+    images: ["/projects/avocat-1.png", "/projects/avocat-2.png", "/projects/avocat-3.png"],
+    testimonial: {
+      text: "Un site qui reflète parfaitement notre professionnalisme tout en restant accessible. Le système de rendez-vous en ligne a transformé notre organisation.",
+      author: "Me Claire Martin",
+      role: "Associée principale"
     }
   }
 ];

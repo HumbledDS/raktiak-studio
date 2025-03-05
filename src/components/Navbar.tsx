@@ -29,9 +29,9 @@ export default function Navbar() {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
-    { href: "/about", label: "À propos" },
     { href: "/services", label: "Services" },
-    { href: "/projects", label: "Projets" },
+    { href: "/projets", label: "Projets" },
+    { href: "/apropos", label: "À propos" },
     { href: "/contact", label: "Contact" }
   ];
 
