@@ -301,7 +301,7 @@ export default function Contact() {
                 
                 <div className="mt-10">
                   <h3 className="font-semibold mb-4">Délai de réponse</h3>
-                  <p className="text-[#F5F5F5]/70">Je m'engage à répondre à toutes les demandes dans un délai de 24 heures ouvrées.</p>
+                  <p className="text-[#F5F5F5]/70">Je m'engage à répondre à toutes les demandes dans un délai de 48 heures ouvrées.</p>
                 </div>
                 
                 <div className="mt-10">
@@ -325,7 +325,7 @@ export default function Contact() {
             {[
               {
                 question: "Quel est votre délai de réponse ?",
-                answer: "Je m'engage à répondre à toutes les demandes dans un délai de 24 heures ouvrées."
+                answer: "Je m'engage à répondre à toutes les demandes dans un délai de 48 heures ouvrées."
               },
               {
                 question: "Comment se déroule la première consultation ?",

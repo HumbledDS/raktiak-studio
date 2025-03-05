@@ -33,7 +33,7 @@ const projects: Project[] = [
     description: "Plateforme complète pour un salon de beauté haut de gamme, avec système de réservation en ligne, galerie de réalisations et profils des experts.",
     features: [
       "Calendrier de réservation interactif",
-      "Paiement d&apos;acompte sécurisé",
+      "Paiement d'acompte sécurisé",
       "Notifications automatiques par email et SMS",
       "Galerie de réalisations filtrables",
       "Profils détaillés des experts"
@@ -46,7 +46,7 @@ const projects: Project[] = [
     images: ["/projects/beauty-thumb.png", "/projects/beauty-thumb2.png", "/projects/beauty-thumb3.png"],
     link: "#",
     testimonial: {
-      text: "Grâce à RakTiak Studio, notre salon a fait un bond dans l&apos;ère numérique. Le système de réservation a transformé notre organisation et nos clients adorent la facilité d&apos;utilisation.",
+      text: "Grâce à RakTiak Studio, notre salon a fait un bond dans l'ère numérique. Le système de réservation a transformé notre organisation et nos clients adorent la facilité d'utilisation.",
       author: "Sophie Martin",
       role: "Directrice, LuxeBeauty"
     }
@@ -73,7 +73,7 @@ const projects: Project[] = [
     images: ["/projects/food-thumb2.png", "/projects/food-thumb2.png", "/projects/food-thumb3.png"],
     link: "#",
     testimonial: {
-      text: "L&apos;application développée par Babacar a révolutionné notre service de livraison. Nos clients apprécient la facilité de commande et notre équipe gagne un temps précieux.",
+      text: "L'application développée par Babacar a révolutionné notre service de livraison. Nos clients apprécient la facilité de commande et notre équipe gagne un temps précieux.",
       author: "Thomas Dubois",
       role: "Fondateur, FreshBite"
     }
@@ -111,17 +111,17 @@ const projects: Project[] = [
     client: "Boutique de vêtements",
     category: "E-commerce",
     technologies: ["Next.js", "MongoDB", "AWS"],
-    description: "Boutique en ligne de vêtements avec expérience d&apos;achat immersive et fonctionnalités avancées de personnalisation.",
+    description: "Boutique en ligne de vêtements avec expérience d'achat immersive et fonctionnalités avancées de personnalisation.",
     features: [
       "Visualisation 3D des produits",
-      "Recommandations personnalisées basées sur l&apos;IA",
+      "Recommandations personnalisées basées sur l'IA",
       "Essayage virtuel",
       "Système de fidélité multi-niveaux",
       "Intégration avec les réseaux sociaux"
     ],
     results: [
       "Taux de conversion de 5.8%",
-      "Réduction du taux d&apos;abandon du panier de 35%",
+      "Réduction du taux d'abandon du panier de 35%",
       "Augmentation du temps passé sur le site de 60%"
     ],
     images: ["/projects/ecommerce-mereh.png", "/projects/ecommerce-mereh.png", "/projects/ecommerce-mereh.png"],
@@ -135,7 +135,7 @@ const projects: Project[] = [
   {
     id: "conseilsplus",
     title: "ConseilsPlus",
-    client: "Cabinet d&apos;expertise comptable",
+    client: "Cabinet d'expertise comptable",
     category: "Services",
     technologies: ["Vue.js", "Node.js", "PostgreSQL"],
     description: "Plateforme de consultation en ligne pour experts-comptables, permettant la gestion des clients, des documents et des rendez-vous.",
@@ -154,7 +154,7 @@ const projects: Project[] = [
     images: ["/projects/dentist-thumb1.png", "/projects/dentist-thumb2.png", "/projects/dentist-thumb3.png"],
     link: "#",
     testimonial: {
-      text: "La plateforme développée par Babacar nous a permis de moderniser notre cabinet et d&apos;offrir un service à distance de qualité. Nos clients apprécient particulièrement la simplicité d&apos;utilisation.",
+      text: "La plateforme développée par Babacar nous a permis de moderniser notre cabinet et d'offrir un service à distance de qualité. Nos clients apprécient particulièrement la simplicité d'utilisation.",
       author: "Philippe Moreau",
       role: "Associé principal, ConseilsPlus"
     }
@@ -185,7 +185,7 @@ export default function Projects() {
               Mes réalisations
             </h1>
             <p className="text-xl text-[#F5F5F5]/80 mb-8">
-              Découvrez une sélection de projets web que j&apos;ai réalisés pour des clients de divers secteurs d&apos;activité.
+              Découvrez une sélection de projets web que j'ai réalisés pour des clients de divers secteurs d'activité.
             </p>
           </div>
         </div>
