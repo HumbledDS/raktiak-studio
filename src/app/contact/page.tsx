@@ -27,11 +27,21 @@ export default function Contact() {
     setSubmitError("");
     
     try {
-      // Simuler un envoi de formulaire
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log("Form data:", data);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Erreur lors de l\'envoi du message');
+      }
+
+      const result = await response.json();
       
-      // Réinitialiser le formulaire et afficher un message de succès
+      // Réinitialiser le formulaire et afficher le message de succès
       reset();
       setSubmitSuccess(true);
       setTimeout(() => setSubmitSuccess(false), 5000);
@@ -333,7 +343,7 @@ export default function Contact() {
               },
               {
                 question: "Quels sont les modes de paiement acceptés ?",
-                answer: "J'accepte les paiements par virement bancaire et PayPal. Un acompte de 30% est demandé au démarrage du projet."
+                answer: "J'accepte les paiements par virement bancaire et PayPal. Un acompte de 50% est demandé au démarrage du projet."
               },
               {
                 question: "Proposez-vous des services de maintenance ?",
