@@ -1,6 +1,0 @@
-{
-  "buildCommand": "npm run custom-build",
-  "installCommand": "npm install",
-  "framework": "nextjs",
-  "region": "cdg1"
-} 
