@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import { Metadata } from "next";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import CTAButton from "@/components/CTAButton";
+import { motion } from "framer-motion";
 
 export const metadata: Metadata = {
   title: "Services | RakTiak Studio",
@@ -105,11 +107,40 @@ function AddonCard({ title, price, description, icon }: AddonCardProps) {
   );
 }
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { 
+    opacity: 0,
+    y: 20
+  },
+  visible: { 
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
+
 export default function Services() {
   return (
     <div className="min-h-screen pt-24 pb-12">
-      {/* Hero Section */}
-      <section className="py-12 px-6 relative">
+      {/* Hero Section avec animation */}
+      <motion.section 
+        className="py-12 px-6"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-[#8A2BE2]/10 to-transparent z-0"></div>
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto">
@@ -121,73 +152,94 @@ export default function Services() {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
       
       {/* Main Services */}
       <section className="py-16 px-6">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">Mes offres</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-            <ServiceCard 
-              title="Site Vitrine Premium"
-              price="1000€"
-              description="Site élégant et responsive pour présenter votre activité et attirer de nouveaux clients."
-              features={[
-                "5 pages personnalisées",
-                "Design sur mesure",
-                "Formulaire de contact",
-                "Intégration Google Maps",
-                "Optimisation SEO de base",
-                "Responsive design",
-                "Formation à l'utilisation"
-              ]}
-              excludedFeatures={[
-                "Système de réservation",
-                "Boutique en ligne",
-                "Blog intégré"
-              ]}
-              image="/services/site-vitrine.jpg"
-              timeframe="2 semaines"
-            />
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div
+              variants={itemVariants}
+              className="glass rounded-xl overflow-hidden border border-[#8A2BE2]/20"
+            >
+              <ServiceCard 
+                title="Site Vitrine Premium"
+                price="1000€"
+                description="Site élégant et responsive pour présenter votre activité et attirer de nouveaux clients."
+                features={[
+                  "5 pages personnalisées",
+                  "Design sur mesure",
+                  "Formulaire de contact",
+                  "Intégration Google Maps",
+                  "Optimisation SEO de base",
+                  "Responsive design",
+                  "Formation à l'utilisation"
+                ]}
+                excludedFeatures={[
+                  "Système de réservation",
+                  "Boutique en ligne",
+                  "Blog intégré"
+                ]}
+                image="/services/site-vitrine.jpg"
+                timeframe="2 semaines"
+              />
+            </motion.div>
             
-            <ServiceCard 
-              title="Site E-commerce Essentiel"
-              price="1500€"
-              description="Boutique en ligne complète pour vendre vos produits et développer votre activité commerciale."
-              features={[
-                "Catalogue de produits",
-                "Panier d'achat",
-                "Système de paiement sécurisé",
-                "Gestion des stocks",
-                "Tableau de bord admin",
-                "Optimisation SEO de base",
-                "Responsive design",
-                "Formation à l'utilisation"
-              ]}
-              image="/services/ecommerce.jpg"
-              popular={false}
-              timeframe="3 semaines"
-            />
+            <motion.div
+              variants={itemVariants}
+              className="glass rounded-xl overflow-hidden border border-[#8A2BE2]/20"
+            >
+              <ServiceCard 
+                title="Site E-commerce Essentiel"
+                price="1500€"
+                description="Boutique en ligne complète pour vendre vos produits et développer votre activité commerciale."
+                features={[
+                  "Catalogue de produits",
+                  "Panier d'achat",
+                  "Système de paiement sécurisé",
+                  "Gestion des stocks",
+                  "Tableau de bord admin",
+                  "Optimisation SEO de base",
+                  "Responsive design",
+                  "Formation à l'utilisation"
+                ]}
+                image="/services/ecommerce.jpg"
+                popular={false}
+                timeframe="3 semaines"
+              />
+            </motion.div>
             
-            <ServiceCard 
-              title="Application Web Personnalisée"
-              price="À partir de 1500€"
-              description="Solution sur mesure adaptée à vos besoins spécifiques et à votre secteur d'activité."
-              features={[
-                "Analyse des besoins",
-                "Conception UX/UI",
-                "Développement sur mesure",
-                "Fonctionnalités personnalisées",
-                "Tests approfondis",
-                "Déploiement",
-                "Formation à l'utilisation",
-                "Documentation technique"
-              ]}
-              image="/services/application-web.jpg"
-              timeframe="4-6 semaines"
-            />
-          </div>
+            <motion.div
+              variants={itemVariants}
+              className="glass rounded-xl overflow-hidden border border-[#8A2BE2]/20"
+            >
+              <ServiceCard 
+                title="Application Web Personnalisée"
+                price="À partir de 1500€"
+                description="Solution sur mesure adaptée à vos besoins spécifiques et à votre secteur d'activité."
+                features={[
+                  "Analyse des besoins",
+                  "Conception UX/UI",
+                  "Développement sur mesure",
+                  "Fonctionnalités personnalisées",
+                  "Tests approfondis",
+                  "Déploiement",
+                  "Formation à l'utilisation",
+                  "Documentation technique"
+                ]}
+                image="/services/application-web.jpg"
+                timeframe="4-6 semaines"
+              />
+            </motion.div>
+          </motion.div>
         </div>
       </section>
       
@@ -219,13 +271,18 @@ export default function Services() {
               },
               
             ].map((addon, index) => (
-              <AddonCard 
+              <motion.div
                 key={index}
-                title={addon.title}
-                price={addon.price}
-                description={addon.description}
-                icon={addon.icon}
-              />
+                variants={itemVariants}
+                className="glass rounded-xl p-6 md:p-8 border border-[#8A2BE2]/20 flex flex-col h-full"
+              >
+                <div className="text-[#40E0D0] mb-6 transition-transform duration-300 hover:scale-110">
+                  {addon.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#40E0D0] transition-colors">{addon.title}</h3>
+                <div className="text-lg font-semibold text-[#40E0D0] mb-4">{addon.price}</div>
+                <p className="text-[#F5F5F5]/80 text-sm">{addon.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -274,8 +331,9 @@ export default function Services() {
                   description: "Mise en ligne et formation à l'utilisation de votre solution."
                 }
               ].map((item, index) => (
-                <div 
+                <motion.div 
                   key={index}
+                  variants={itemVariants}
                   className={`relative flex items-center gap-8 ${
                     index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                   }`}

@@ -152,7 +152,7 @@ const projects: Project[] = [
       "Nouveau canal de vente (événements)",
       "Intégration des réseaux sociaux"
     ],
-    images: ["/projects/fleuriste-1.png", "/projects/fleuriste-2.png", "/projects/fleuriste-3.png"],
+    images: ["/projects/flower-3.png", "/projects/flower-2.jpg", "/projects/flower-1.jpg"],
     testimonial: {
       text: "Le site capture parfaitement l'essence de notre boutique. Nos clients apprécient particulièrement la galerie photos et la facilité de contact pour les événements.",
       author: "Marie Madeleine Lemaire",
@@ -322,14 +322,20 @@ export default function Projects() {
       
       {/* Project Modal */}
       {activeProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90">
-          <div className="relative w-full max-w-6xl max-h-[90vh] overflow-y-auto glass rounded-xl border border-[#8A2BE2]/20">
-            {/* Close button */}
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90"
+          onClick={() => setActiveProject(null)}
+        >
+          <div 
+            className="relative w-full max-w-6xl max-h-[90vh] overflow-y-auto glass rounded-xl border border-[#8A2BE2]/20"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button - Style modifié */}
             <button
               onClick={() => setActiveProject(null)}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-[#0A0A0A]/80 text-white hover:bg-[#8A2BE2] transition-colors"
+              className="absolute top-4 right-4 z-10 p-3 rounded-full bg-[#0A0A0A] border border-[#8A2BE2]/20 text-white hover:bg-[#8A2BE2] hover:border-[#8A2BE2] transition-all"
             >
-              <FaTimes />
+              <FaTimes size={20} />
             </button>
 
             {/* Image gallery avec hauteur augmentée */}
