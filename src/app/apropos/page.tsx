@@ -27,7 +27,7 @@ export default function About() {
               >
                 <div className="aspect-square relative rounded-xl overflow-hidden border-2 border-[#8A2BE2]/30">
                   <Image 
-                    src="/profile.jpg" 
+                    src="/projects/asiantechguy2.png" 
                     alt="Babacar GUEYE" 
                     fill
                     className="object-cover"
