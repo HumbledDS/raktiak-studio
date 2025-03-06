@@ -16,15 +16,23 @@ type FormData = {
   source: string;
 };
 
+interface ErrorResponse {
+  message: string;
+  error?: string;
+  code?: string;
+}
+
 export default function Contact() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [submitError, setSubmitError] = useState("");
+  const [submitError, setSubmitError] = useState<string>("");
+  const [debugInfo, setDebugInfo] = useState<string>("");
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     setSubmitError("");
+    setDebugInfo("");
     
     try {
       const response = await fetch('/api/contact', {
@@ -35,19 +43,43 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json() as ErrorResponse;
+
       if (!response.ok) {
-        throw new Error('Erreur lors de l\'envoi du message');
+        let errorMessage = "Une erreur est survenue.";
+        
+        switch (result.code) {
+          case 'SMTP_CONNECTION_FAILED':
+            errorMessage = "Impossible de se connecter au serveur d'envoi d'emails.";
+            break;
+          case 'INVALID_SENDER':
+            errorMessage = "L'adresse d'expédition n'est pas valide.";
+            break;
+          case 'INVALID_RECIPIENT':
+            errorMessage = "L'adresse email fournie n'est pas valide.";
+            break;
+          case 'RATE_LIMIT':
+            errorMessage = "Trop de tentatives. Veuillez réessayer dans quelques minutes.";
+            break;
+          default:
+            errorMessage = result.message || "Une erreur inattendue est survenue.";
+        }
+
+        setSubmitError(errorMessage);
+        if (process.env.NODE_ENV === 'development') {
+          setDebugInfo(result.error || 'Pas de détails supplémentaires');
+        }
+        throw new Error(errorMessage);
       }
 
-      const result = await response.json();
-      
-      // Réinitialiser le formulaire et afficher le message de succès
       reset();
       setSubmitSuccess(true);
       setTimeout(() => setSubmitSuccess(false), 5000);
     } catch (error) {
       console.error("Error submitting form:", error);
-      setSubmitError("Une erreur est survenue lors de l'envoi du formulaire. Veuillez réessayer.");
+      if (!submitError) { // Si pas déjà défini par le switch
+        setSubmitError("Erreur de connexion. Vérifiez votre connexion internet et réessayez.");
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -93,8 +125,13 @@ export default function Contact() {
                 )}
                 
                 {submitError && (
-                  <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg text-red-400">
-                    {submitError}
+                  <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
+                    <p className="text-red-400 mb-2">{submitError}</p>
+                    {debugInfo && process.env.NODE_ENV === 'development' && (
+                      <p className="text-xs text-red-400/70 mt-2">
+                        Debug: {debugInfo}
+                      </p>
+                    )}
                   </div>
                 )}
                 

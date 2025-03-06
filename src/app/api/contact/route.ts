@@ -5,16 +5,55 @@ export async function POST(request: Request) {
   try {
     const { name, email, phone, projectType, budget, deadline, description, source } = await request.json();
 
-    // Configurer le transporteur email
+    // Validation basique
+    if (!email || !name || !description) {
+      return NextResponse.json(
+        { 
+          message: "Informations manquantes", 
+          code: "MISSING_FIELDS",
+          error: "Required fields: name, email, description" 
+        }, 
+        { status: 400 }
+      );
+    }
+
+    // Validation email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { 
+          message: "Format d'email invalide", 
+          code: "INVALID_EMAIL",
+          error: "Invalid email format" 
+        }, 
+        { status: 400 }
+      );
+    }
+
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
-      secure: false, // Important: false pour le port 587
+      secure: false,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD,
       },
     });
+
+    try {
+      // Vérifier la connexion SMTP
+      await transporter.verify();
+    } catch (smtpError) {
+      console.error('SMTP Connection Error:', smtpError);
+      return NextResponse.json(
+        { 
+          message: "Erreur de configuration email", 
+          code: "SMTP_CONNECTION_FAILED",
+          error: smtpError instanceof Error ? smtpError.message : 'Unknown SMTP error'
+        }, 
+        { status: 500 }
+      );
+    }
 
     // Email pour l'administrateur
     const adminEmailContent = `
@@ -66,31 +105,44 @@ export async function POST(request: Request) {
       </div>
     `;
 
-    // Envoi de l'email à l'administrateur
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM,
-      to: process.env.CONTACT_EMAIL,
-      subject: `Nouvelle demande de projet - ${name}`,
-      html: adminEmailContent,
-      replyTo: email,
-    });
+    try {
+      // Envoi des emails
+      await Promise.all([
+        transporter.sendMail({
+          from: process.env.SMTP_FROM,
+          to: process.env.CONTACT_EMAIL,
+          subject: `Nouvelle demande de projet - ${name}`,
+          html: adminEmailContent,
+          replyTo: email,
+        }),
+        transporter.sendMail({
+          from: process.env.SMTP_FROM,
+          to: email,
+          subject: `Confirmation de votre demande - RakTiak Studio`,
+          html: clientEmailContent,
+        })
+      ]);
+    } catch (emailError) {
+      console.error('Email Sending Error:', emailError);
+      return NextResponse.json(
+        { 
+          message: "Erreur d'envoi d'email", 
+          code: "EMAIL_SEND_FAILED",
+          error: emailError instanceof Error ? emailError.message : 'Unknown sending error'
+        }, 
+        { status: 500 }
+      );
+    }
 
-    // Envoi de l'email de confirmation au prospect
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM,
-      to: email,
-      subject: `Confirmation de votre demande - RakTiak Studio`,
-      html: clientEmailContent,
-    });
-
-    return NextResponse.json(
-      { message: "Message envoyé avec succès" },
-      { status: 200 }
-    );
+    return NextResponse.json({ message: "Message envoyé avec succès" });
   } catch (error) {
-    console.error('Erreur lors de l\'envoi du message:', error);
+    console.error('General Error:', error);
     return NextResponse.json(
-      { message: "Erreur lors de l'envoi du message" },
+      { 
+        message: "Erreur serveur", 
+        code: "SERVER_ERROR",
+        error: error instanceof Error ? error.message : 'Unknown error'
+      }, 
       { status: 500 }
     );
   }
