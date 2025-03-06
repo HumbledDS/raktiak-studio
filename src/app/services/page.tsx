@@ -39,27 +39,17 @@ function ServiceCard({
         </div>
       )}
       
-      <div className="relative h-52 md:h-48">
-        <Image 
-          src={image} 
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent opacity-60"></div>
-      </div>
-      
       <div className="p-6 md:p-8 flex-grow flex flex-col bg-[#0A0A0A]/95">
-        <div className="mb-6">
+        <div className="text-center mb-6">
           <h3 className="text-2xl font-bold mb-2 group-hover:text-[#40E0D0] transition-colors">{title}</h3>
-          <div className="text-3xl font-bold text-[#40E0D0] mb-4 flex items-baseline gap-2">
+          <div className="text-3xl font-bold text-[#40E0D0] mb-4 flex items-baseline justify-center gap-2">
             {price}
             <span className="text-sm font-normal text-[#F5F5F5]/50">TTC</span>
           </div>
           <p className="text-[#F5F5F5]/70">{description}</p>
         </div>
         
-        <div className="mb-6">
+        <div className="mb-6 text-center">
           <div className="inline-block px-4 py-1 rounded-full bg-[#8A2BE2]/20 text-sm text-[#40E0D0]">
             Délai: {timeframe}
           </div>
@@ -84,11 +74,11 @@ function ServiceCard({
         </div>
       </div>
       
-      <div className="p-6 md:p-8 pt-0 mt-auto">
+      <div className="p-6 md:p-8 pt-0 mt-auto text-center">
         <CTAButton 
           text="Demander un devis" 
           href="/contact" 
-          className="w-full text-center py-3 text-sm font-medium tracking-wider hover:shadow-[0_0_15px_rgba(138,43,226,0.4)]"
+          className="inline-block px-8 py-3 text-sm font-medium tracking-wider hover:shadow-[0_0_15px_rgba(138,43,226,0.4)]"
         />
       </div>
     </div>
@@ -158,7 +148,7 @@ export default function Services() {
                 "Blog intégré"
               ]}
               image="/services/site-vitrine.jpg"
-              timeframe="2-3 semaines"
+              timeframe="2 semaines"
             />
             
             <ServiceCard 
@@ -176,8 +166,8 @@ export default function Services() {
                 "Formation à l'utilisation"
               ]}
               image="/services/ecommerce.jpg"
-              popular={true}
-              timeframe="3-4 semaines"
+              popular={false}
+              timeframe="3 semaines"
             />
             
             <ServiceCard 
@@ -195,7 +185,7 @@ export default function Services() {
                 "Documentation technique"
               ]}
               image="/services/application-web.jpg"
-              timeframe="4-8 semaines"
+              timeframe="4-6 semaines"
             />
           </div>
         </div>
@@ -324,7 +314,7 @@ export default function Services() {
             {[
               {
                 question: "Quels sont les délais de réalisation ?",
-                answer: "Les délais varient selon la complexité du projet. Un site vitrine prend généralement 2-3 semaines, un e-commerce 3-4 semaines, et une application web personnalisée 4-6 semaines."
+                answer: "Les délais varient selon la complexité du projet. Un site vitrine prend généralement 2 semaines, un e-commerce 3 semaines, et une application web personnalisée 4-6 semaines."
               },
               {
                 question: "Comment se déroule le paiement ?",
