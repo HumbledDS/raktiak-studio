@@ -1,14 +1,8 @@
 "use client";
 import Image from "next/image";
-import { Metadata } from "next";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import CTAButton from "@/components/CTAButton";
 import { motion } from "framer-motion";
-
-export const metadata: Metadata = {
-  title: "Services | RakTiak Studio",
-  description: "Découvrez mes services de développement web sur mesure pour votre entreprise. Sites vitrines, e-commerce et applications web personnalisées.",
-};
 
 interface ServiceCardProps {
   title: string;
@@ -342,21 +336,24 @@ export default function Services() {
                   <div className="absolute left-0 md:left-1/2 w-8 h-8 bg-[#0A0A0A] border-4 border-[#8A2BE2] rounded-full transform md:-translate-x-1/2 z-10"></div>
                   
                   {/* Contenu */}
-                  <div className={`flex-1 ${
-                    index % 2 === 0 
-                      ? 'md:pr-16 pl-16 md:pl-0 text-left' 
-                      : 'md:pl-16 pl-16 md:text-right'
-                  }`}>
+                  <motion.div
+                    variants={itemVariants}
+                    className={`flex-1 ${
+                      index % 2 === 0 
+                        ? 'md:pr-16 pl-16 md:pl-0 text-left' 
+                        : 'md:pl-16 pl-16 md:text-right'
+                    }`}
+                  >
                     <div className="glass rounded-xl p-6 border border-[#8A2BE2]/20 hover:border-[#40E0D0]/50 transition-all">
                       <span className="text-sm text-[#40E0D0] font-medium">{item.step}</span>
                       <h3 className="text-xl font-bold mt-2 mb-3">{item.title}</h3>
                       <p className="text-[#F5F5F5]/70">{item.description}</p>
                     </div>
-                  </div>
+                  </motion.div>
                   
                   {/* Espace pour l'autre côté */}
                   <div className="hidden md:block flex-1"></div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -395,10 +392,14 @@ export default function Services() {
                 answer: "Votre satisfaction est ma priorité. Je travaille de manière itérative avec des points de validation réguliers pour m'assurer que le projet correspond à vos attentes. Des révisions sont incluses dans chaque offre."
               }
             ].map((faq, index) => (
-              <div key={index} className="glass rounded-xl p-6 border border-[#8A2BE2]/20">
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="glass rounded-xl p-6 border border-[#8A2BE2]/20"
+              >
                 <h3 className="text-xl font-bold mb-3 text-[#40E0D0]">{faq.question}</h3>
                 <p className="text-[#F5F5F5]/70">{faq.answer}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

@@ -5,6 +5,7 @@ import CTAButton from "@/components/CTAButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import CounterSection from "@/components/CounterSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -154,7 +155,7 @@ export default function Home() {
                         src={project.image} 
                         alt={project.title}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <span className="text-white font-medium flex items-center gap-2">

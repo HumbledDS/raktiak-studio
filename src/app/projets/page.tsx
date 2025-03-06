@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaExternalLinkAlt, FaFilter, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 interface Project {
   id: string;
@@ -215,6 +216,30 @@ const projects: Project[] = [
   }
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { 
+    opacity: 0,
+    scale: 0.95
+  },
+  visible: { 
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.4
+    }
+  }
+};
+
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("tous");
   const [activeProject, setActiveProject] = useState<Project | null>(null);
@@ -230,8 +255,13 @@ export default function Projects() {
   
   return (
     <div className="min-h-screen pt-24 pb-12">
-      {/* Hero Section */}
-      <section className="py-12 px-6 relative">
+      {/* Hero Section avec animation */}
+      <motion.section 
+        className="py-12 px-6 relative"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-[#8A2BE2]/10 to-transparent z-0"></div>
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto">
@@ -243,10 +273,15 @@ export default function Projects() {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
       
-      {/* Filters */}
-      <section className="py-6 px-6">
+      {/* Filters avec animation */}
+      <motion.section 
+        className="py-6 px-6"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+      >
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-8">
             <FaFilter className="text-[#40E0D0] mr-3" />
@@ -267,57 +302,62 @@ export default function Projects() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
       
-      {/* Projects Grid */}
+      {/* Grille de projets avec animation */}
       <section className="py-6 px-6">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
-              <div 
-                key={project.id}
-                className="glass rounded-xl overflow-hidden border border-[#8A2BE2]/20 hover:border-[#40E0D0]/40 transition-all group"
-                onClick={() => {
-                  setActiveProject(project);
-                  setCurrentImageIndex(0);
-                }}
-              >
-                <div className="relative h-64 w-full">
-                  <Image 
-                    src={project.images[0]} 
-                    alt={project.title}
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A0A0A]/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                      <p className="text-[#40E0D0]">{project.category}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-[#40E0D0] mb-3">{project.client}</p>
-                  <p className="text-[#F5F5F5]/70 line-clamp-3">{project.description}</p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 3).map((tech, index) => (
-                      <span key={index} className="text-xs bg-[#1a1a1a] text-[#F5F5F5]/70 px-2 py-1 rounded">
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <span className="text-xs bg-[#1a1a1a] text-[#F5F5F5]/70 px-2 py-1 rounded">
-                        +{project.technologies.length - 3}
-                      </span>
-                    )}
+        <motion.div 
+          className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {filteredProjects.map((project) => (
+            <motion.div
+              key={project.id}
+              variants={itemVariants}
+              layoutId={project.id}
+              className="glass rounded-xl overflow-hidden border border-[#8A2BE2]/20"
+              onClick={() => {
+                setActiveProject(project);
+                setCurrentImageIndex(0);
+              }}
+            >
+              <div className="relative h-64 w-full">
+                <Image 
+                  src={project.images[0]} 
+                  alt={project.title}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A0A0A]/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                    <p className="text-[#40E0D0]">{project.category}</p>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <p className="text-[#40E0D0] mb-3">{project.client}</p>
+                <p className="text-[#F5F5F5]/70 line-clamp-3">{project.description}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.technologies.slice(0, 3).map((tech, index) => (
+                    <span key={index} className="text-xs bg-[#1a1a1a] text-[#F5F5F5]/70 px-2 py-1 rounded">
+                      {tech}
+                    </span>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <span className="text-xs bg-[#1a1a1a] text-[#F5F5F5]/70 px-2 py-1 rounded">
+                      +{project.technologies.length - 3}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </section>
       
       {/* Project Modal */}

@@ -5,59 +5,77 @@ import { FaCode, FaServer, FaDatabase, FaPalette, FaTools, FaBook, FaGamepad, Fa
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 
-export default function About() {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
-  };
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.6
+    }
+  }
+};
 
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+export default function About() {
   return (
     <div className="min-h-screen pt-24 pb-12">
-      {/* Section Introduction */}
-      <ScrollReveal>
-        <section className="py-12 px-6">
-          <div className="container mx-auto">
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <motion.div 
-                className="w-full md:w-1/3 relative"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="aspect-square relative rounded-xl overflow-hidden border-2 border-[#8A2BE2]/30">
-                  <Image 
-                    src="/projects/asiantechguy2.png" 
-                    alt="Babacar GUEYE" 
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-                <div className="absolute -bottom-4 -right-4 w-full h-full rounded-xl border-2 border-[#40E0D0]/30 -z-10"></div>
-              </motion.div>
-              
-              <motion.div 
-                className="w-full md:w-2/3"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">À propos de moi</h1>
-                <p className="text-xl mb-6 text-[#F5F5F5]/80">
-                  Bonjour, je suis <span className="text-[#40E0D0] font-semibold">Babacar</span>, développeur fullstack et Data Engineer passionné par la création d'expériences web innovantes et l'analyse de données.
-                </p>
-                <p className="text-[#F5F5F5]/70 mb-6">
-                  Basé à Paris, je combine expertise en développement web et en Cloud/Data Engineering et Marketing pour créer des solutions digitales complètes. Mon approche unique mêle design moderne, fonctionnalités robustes et analyse de données sectorielles pour des projets à forte valeur ajoutée pour votre business.
-                </p>
-                <p className="text-[#F5F5F5]/70">
-                  Avec une approche centrée sur l'utilisateur notamment avec la view Mobile et un souci constant de la qualité, je m'engage à livrer des projets qui dépassent vos attentes et qui contribuent réellement à la croissance de votre activité.
-                </p>
-              </motion.div>
-            </div>
+      {/* Hero Section */}
+      <motion.section 
+        className="py-12 px-6"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+      >
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <motion.div 
+              className="w-full md:w-1/3 relative"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="aspect-square relative rounded-xl overflow-hidden border-2 border-[#8A2BE2]/30">
+                <Image 
+                  src="/projects/asiantechguy2.png" 
+                  alt="Babacar GUEYE" 
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-full h-full rounded-xl border-2 border-[#40E0D0]/30 -z-10"></div>
+            </motion.div>
+            
+            <motion.div 
+              className="w-full md:w-2/3"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">À propos de moi</h1>
+              <p className="text-xl mb-6 text-[#F5F5F5]/80">
+                Bonjour, je suis <span className="text-[#40E0D0] font-semibold">Babacar</span>, développeur fullstack et Data Engineer passionné par la création d'expériences web innovantes et l'analyse de données.
+              </p>
+              <p className="text-[#F5F5F5]/70 mb-6">
+                Basé à Paris, je combine expertise en développement web et en Cloud/Data Engineering et Marketing pour créer des solutions digitales complètes. Mon approche unique mêle design moderne, fonctionnalités robustes et analyse de données sectorielles pour des projets à forte valeur ajoutée pour votre business.
+              </p>
+              <p className="text-[#F5F5F5]/70">
+                Avec une approche centrée sur l'utilisateur notamment avec la view Mobile et un souci constant de la qualité, je m'engage à livrer des projets qui dépassent vos attentes et qui contribuent réellement à la croissance de votre activité.
+              </p>
+            </motion.div>
           </div>
-        </section>
-      </ScrollReveal>
+        </div>
+      </motion.section>
       
       {/* Section Parcours professionnel */}
       <section className="py-24 px-6 bg-black/30">
@@ -192,11 +210,25 @@ export default function About() {
       </section>
       
       {/* Section Compétences */}
-      <section className="py-12 px-6 bg-black/30">
+      <motion.section 
+        className="py-12 px-6 bg-black/30"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Compétences techniques</h2>
+          <motion.h2 
+            className="text-3xl font-bold mb-8 text-center"
+            variants={fadeInUp}
+          >
+            Mes compétences
+          </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={staggerContainer}
+          >
             {[
               {
                 icon: <FaCode className="text-4xl text-[#40E0D0] mb-4" />,
@@ -224,7 +256,11 @@ export default function About() {
                 skills: ["Git", "Docker", "AWS", "CI/CD"]
               }
             ].map((category, index) => (
-              <div key={index} className="glass rounded-xl p-6 border border-[#8A2BE2]/20 text-center">
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                className="glass rounded-xl p-6 border border-[#8A2BE2]/20"
+              >
                 {category.icon}
                 <h3 className="text-xl font-bold mb-4">{category.title}</h3>
                 <ul className="space-y-2">
@@ -232,11 +268,11 @@ export default function About() {
                     <li key={skillIndex} className="text-[#F5F5F5]/70">{skill}</li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
       
       {/* Section Centres d'intérêt */}
       <ScrollReveal>
