@@ -52,59 +52,6 @@ const projects: Project[] = [
     }
   },
   {
-    id: "freshbite",
-    title: "FreshBite",
-    client: "Restaurant fast-food",
-    category: "Restauration",
-    technologies: ["React", "Firebase", "Stripe"],
-    description: "Application de commande en ligne avec système de livraison et de suivi en temps réel pour une chaîne de fast-food healthy.",
-    features: [
-      "Menu interactif avec personnalisation des commandes",
-      "Système de paiement sécurisé",
-      "Suivi de livraison en temps réel",
-      "Programme de fidélité intégré",
-      "Tableau de bord pour la gestion des commandes"
-    ],
-    results: [
-      "Augmentation du panier moyen de 28%",
-      "Réduction des erreurs de commande de 95%",
-      "Temps de traitement des commandes réduit de 40%"
-    ],
-    images: ["/projects/food-thumb2.png", "/projects/food-thumb2.png", "/projects/food-thumb3.png"],
-    link: "#",
-    testimonial: {
-      text: "L'application développée par Babacar a révolutionné notre service de livraison. Nos clients apprécient la facilité de commande et notre équipe gagne un temps précieux.",
-      author: "Thomas Dubois",
-      role: "Fondateur, FreshBite"
-    }
-  },
-  {
-    id: "maitreboulanger",
-    title: "MaîtreBoulanger",
-    client: "Boulangerie artisanale",
-    category: "Commerce local",
-    technologies: ["Next.js", "Tailwind CSS", "Google Analytics"],
-    description: "Site vitrine élégant avec système de précommande et blog de recettes pour une boulangerie artisanale primée.",
-    features: [
-      "Catalogue de produits avec filtres",
-      "Système de précommande avec paiement en ligne",
-      "Blog de recettes et conseils",
-      "Intégration des réseaux sociaux",
-      "Optimisation SEO locale"
-    ],
-    results: [
-      "Clientèle élargie de 40%",
-      "Meilleure organisation de la production",
-      "Visibilité locale améliorée de 60%"
-    ],
-    images: ["/projects/bakery-thumb1.jpg", "/projects/bakery-thumb2.jpg", "/projects/bakery-thumb3.jpg"],
-    testimonial: {
-      text: "Notre boulangerie a gagné en notoriété grâce au site développé par RakTiak Studio. Le système de précommande nous permet de mieux gérer notre production et de réduire le gaspillage.",
-      author: "Jean Lefevre",
-      role: "Propriétaire, MaîtreBoulanger"
-    }
-  },
-  {
     id: "merehcation",
     title: "Merehcation E-book",
     client: "Influence Voyage",
@@ -134,10 +81,61 @@ const projects: Project[] = [
       role: "Propriétaire, Merehcation"
     }
   },
+  {
+    id: "L'antalya",
+    title: "L'antalya",
+    client: "Restaurant",
+    category: "Restauration",
+    technologies: ["React", "Django", "Tailwind CSS"],
+    description: "Site vitrine pour un restaurant de cuisine turque, kebab, grill et pizza.",
+    features: [
+      "Menu interactif avec personnalisation des commandes",
+      "Intégration des réseaux sociaux",
+      "Optimisation SEO locale",
+      "Formation à l'utilisation"
+    ],
+    results: [
+      "visibilité locale améliorée",
+      "Formation à l'utilisation"
+    ],
+    images: ["/projects/food-thumb2.png", "/projects/food-thumb2.png", "/projects/food-thumb3.png"],
+    link: "#",
+    testimonial: {
+      text: "L'application développée par Babacar a révolutionné notre service de livraison. Nos clients apprécient la facilité de commande et notre équipe gagne un temps précieux.",
+      author: "Omar Senoufi",
+      role: "Fondateur, L'antalya"
+    }
+  },
+  {
+    id: "Artisan Boulanger",
+    title: "Artisan Boulanger",
+    client: "Boulangerie artisanale",
+    category: "Commerce local",
+    technologies: ["Next.js", "Tailwind CSS", "Google Analytics"],
+    description: "Site vitrine élégant et blog de recettes pour une boulangerie artisanale primée.",
+    features: [
+      "Catalogue de produits avec filtres",
+      "Blog de recettes et conseils",
+      "Intégration des réseaux sociaux",
+      "Optimisation SEO locale"
+    ],
+    results: [
+      "Visibilité locale améliorée",
+      "Formation à l'utilisation",
+      "Intégration des réseaux sociaux"
+    ],
+    images: ["/projects/food-thumb3.png", "/projects/bakery-thumb2.jpg", "/projects/bakery-thumb3.jpg"],
+    testimonial: {
+      text: "Notre boulangerie a gagné en notoriété grâce au site développé par RakTiak Studio. Le système de précommande nous permet de mieux gérer notre production et de réduire le gaspillage.",
+      author: "Emmanuel Faye",
+      role: "Propriétaire, Artisan Boulanger"
+    }
+  },
+  
   
   {
-    id: "fleuretsens",
-    title: "Fleur & Sens",
+    id: "Fleurs & Sens",
+    title: "Fleurs  & Sens",
     client: "Fleuriste artisanal",
     category: "Commerce local",
     technologies: ["Next.js", "Tailwind CSS", "Google Analytics"],
@@ -145,51 +143,51 @@ const projects: Project[] = [
     features: [
       "Galerie photo des créations",
       "Section événements spéciaux",
-      "Formulaire de demande de devis",
+      "Formulaire de demande de devis pour les événements",
       "Intégration Instagram",
       "Optimisation SEO local"
     ],
     results: [
-      "Augmentation des commandes événementielles de 40%",
       "Visibilité locale améliorée",
-      "Meilleure présence sur les réseaux sociaux"
+      "Nouveau canal de vente (événements)",
+      "Intégration des réseaux sociaux"
     ],
     images: ["/projects/fleuriste-1.png", "/projects/fleuriste-2.png", "/projects/fleuriste-3.png"],
     testimonial: {
       text: "Le site capture parfaitement l'essence de notre boutique. Nos clients apprécient particulièrement la galerie photos et la facilité de contact pour les événements.",
-      author: "Marie Laurent",
-      role: "Propriétaire, Fleur & Sens"
+      author: "Marie Madeleine Lemaire",
+      role: "Gérante, Fleur & Sens"
     }
   },
   {
-    id: "coachvitalite",
+    id: "Coach Vitalité",
     title: "Coach Vitalité",
     client: "Coach sportif indépendant",
     category: "Services",
-    technologies: ["Shopify", "Liquid", "Mailchimp"],
+    technologies: ["Shopify", "Liquid", "Mailchimp", "DigitalProducts", "Google Analytics", "Stripe"],
     description: "Plateforme de coaching en ligne avec vente de programmes personnalisés et e-books de nutrition et musculation.",
     features: [
       "Boutique en ligne pour e-books et programmes",
       "Blog fitness et nutrition",
       "Newsletter automatisée",
-      "Espace membre sécurisé",
-      "Système de paiement intégré"
+      "Intégration des réseaux sociaux",
+      "Optimisation SEO locale"
     ],
     results: [
       "Vente de 500+ e-books en 3 mois",
       "Construction d'une liste email de 2000+ abonnés",
       "Revenus passifs établis"
     ],
-    images: ["/projects/coach-1.png", "/projects/coach-2.png", "/projects/coach-3.png"],
+    images: ["/projects/fitness-2.jpg", "/projects/fitness-1.jpg", "/projects/fitness-3.jpg"],
     link: "#",
     testimonial: {
       text: "RakTiak Studio a créé exactement ce dont j'avais besoin : une plateforme simple mais efficace pour vendre mes programmes et interagir avec ma communauté.",
-      author: "Marc Dubois",
+      author: "André Recollet",
       role: "Fondateur, Coach Vitalité"
     }
   },
   {
-    id: "cabinetjuridique",
+    id: "Cabinet Martin & Associés",
     title: "Cabinet Martin & Associés",
     client: "Cabinet d'avocats",
     category: "Services",
@@ -204,10 +202,11 @@ const projects: Project[] = [
     ],
     results: [
       "Augmentation des prises de rendez-vous de 60%",
-      "Réduction du temps administratif",
+      "Présence numérique",
+      "Nouveaux prospects",
       "Meilleur référencement local"
     ],
-    images: ["/projects/avocat-1.png", "/projects/avocat-2.png", "/projects/avocat-3.png"],
+    images: ["/projects/lawyer-1.png", "/projects/lawyer-2.png", "/projects/lawyer-3.png"],
     testimonial: {
       text: "Un site qui reflète parfaitement notre professionnalisme tout en restant accessible. Le système de rendez-vous en ligne a transformé notre organisation.",
       author: "Me Claire Martin",
@@ -277,20 +276,21 @@ export default function Projects() {
             {filteredProjects.map((project) => (
               <div 
                 key={project.id}
-                className="glass rounded-xl overflow-hidden border border-[#8A2BE2]/20 hover:border-[#40E0D0]/50 transition-all cursor-pointer group"
+                className="glass rounded-xl overflow-hidden border border-[#8A2BE2]/20 hover:border-[#40E0D0]/40 transition-all group"
                 onClick={() => {
                   setActiveProject(project);
                   setCurrentImageIndex(0);
                 }}
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-64 w-full">
                   <Image 
                     src={project.images[0]} 
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A0A0A]/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                     <div>
                       <h3 className="text-xl font-bold text-white">{project.title}</h3>
                       <p className="text-[#40E0D0]">{project.category}</p>
@@ -322,73 +322,80 @@ export default function Projects() {
       
       {/* Project Modal */}
       {activeProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80" onClick={() => setActiveProject(null)}>
-          <div className="glass-dark rounded-xl border border-[#8A2BE2]/20 max-w-4xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-            <div className="relative h-64 md:h-80">
-              <Image 
-                src={activeProject.images[currentImageIndex]} 
-                alt={activeProject.title}
-                fill
-                className="object-cover"
-              />
-              <button 
-                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center text-white hover:bg-black/80 transition-all"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setActiveProject(null);
-                }}
-              >
-                <FaTimes />
-              </button>
-              
-              {/* Image navigation buttons */}
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90">
+          <div className="relative w-full max-w-6xl max-h-[90vh] overflow-y-auto glass rounded-xl border border-[#8A2BE2]/20">
+            {/* Close button */}
+            <button
+              onClick={() => setActiveProject(null)}
+              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-[#0A0A0A]/80 text-white hover:bg-[#8A2BE2] transition-colors"
+            >
+              <FaTimes />
+            </button>
+
+            {/* Image gallery avec hauteur augmentée */}
+            <div className="relative">
+              {/* Image principale */}
+              <div className="relative h-[600px]">
+                <Image
+                  src={activeProject.images[currentImageIndex]}
+                  alt={`${activeProject.title} - Image ${currentImageIndex + 1}`}
+                  fill
+                  className="object-cover object-top"
+                  sizes="100vw"
+                />
+              </div>
+
+              {/* Navigation des images */}
               {activeProject.images.length > 1 && (
                 <>
-                  <button 
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center text-white hover:bg-black/80 transition-all"
+                  <button
                     onClick={(e) => {
                       e.stopPropagation();
                       setCurrentImageIndex((prev) => 
                         prev === 0 ? activeProject.images.length - 1 : prev - 1
                       );
                     }}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-[#0A0A0A]/80 text-white hover:bg-[#8A2BE2] transition-colors"
                   >
                     <FaChevronLeft />
                   </button>
-                  <button 
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center text-white hover:bg-black/80 transition-all"
+                  <button
                     onClick={(e) => {
                       e.stopPropagation();
                       setCurrentImageIndex((prev) => 
                         prev === activeProject.images.length - 1 ? 0 : prev + 1
                       );
                     }}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-[#0A0A0A]/80 text-white hover:bg-[#8A2BE2] transition-colors"
                   >
                     <FaChevronRight />
                   </button>
                 </>
               )}
-              
-              {/* Image indicators */}
+
+              {/* Miniatures */}
               {activeProject.images.length > 1 && (
-                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                   {activeProject.images.map((_, index) => (
-                    <button 
+                    <button
                       key={index}
-                      className={`w-3 h-3 rounded-full ${
-                        currentImageIndex === index ? "bg-[#40E0D0]" : "bg-white/50"
-                      }`}
                       onClick={(e) => {
                         e.stopPropagation();
                         setCurrentImageIndex(index);
                       }}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        currentImageIndex === index 
+                          ? "bg-[#40E0D0] w-4" 
+                          : "bg-white/50 hover:bg-white"
+                      }`}
                     />
                   ))}
                 </div>
               )}
             </div>
-            
-            <div className="p-6">
+
+            {/* Contenu du projet */}
+            <div className="p-8">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h2 className="text-2xl font-bold">{activeProject.title}</h2>
