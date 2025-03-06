@@ -97,7 +97,7 @@ export async function POST(request: Request) {
         
         <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
           <p style="color: #666;">Cordialement,</p>
-          <p style="margin: 0; color: #333;"><strong>Babacar NDIAYE</strong></p>
+          <p style="margin: 0; color: #333;"><strong>Babacar GUEYE</strong></p>
           <p style="margin: 0; color: #666;">RakTiak Studio</p>
           <p style="margin: 0; color: #666;">contact@raktiak-studio.com</p>
           <p style="margin: 0; color: #666;">06 64 12 73 08</p>

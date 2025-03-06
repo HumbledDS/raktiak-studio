@@ -311,7 +311,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
-                      <p className="text-[#F5F5F5]/70">babacar.work2024@gmail.com</p>
+                      <p className="text-[#F5F5F5]/70">contact@raktiak-studio.com</p>
                     </div>
                   </div>
                   
