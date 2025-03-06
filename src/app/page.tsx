@@ -31,7 +31,7 @@ export default function Home() {
                 <CTAButton 
                   text="Découvrir mes projets" 
                   mobileText="Mes projets"
-                  href="/projects" 
+                  href="/projets" 
                   className="flex-1 flex items-center justify-center gap-2 text-sm py-3"
                 />
                 <CTAButton 
@@ -113,7 +113,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-center mb-12">
               <h2 className="text-3xl font-bold">Projets phares</h2>
               <Link 
-                href="/projects" 
+                href="/projets" 
                 className="flex items-center gap-2 text-[#40E0D0] hover:text-[#40E0D0]/80 transition-colors mt-4 md:mt-0"
               >
                 Voir tous les projets <FaArrowRight />
@@ -145,7 +145,7 @@ export default function Home() {
               ].map((project, index) => (
                 <Link 
                   key={index} 
-                  href="/projects" 
+                  href="/projets" 
                   className="group"
                 >
                   <div className="glass rounded-xl overflow-hidden border border-[#8A2BE2]/20 hover:border-[#40E0D0]/50 transition-all h-full">
