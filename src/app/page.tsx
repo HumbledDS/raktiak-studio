@@ -221,6 +221,8 @@ export default function Home() {
         </section>
       </ScrollReveal>
 
+      
+
       {/* CTA Section */}
       <ScrollReveal direction="up" distance={20} duration={1000} delay={600}>
         <section className="py-40 px-6 relative bg-[#0D0D16]">

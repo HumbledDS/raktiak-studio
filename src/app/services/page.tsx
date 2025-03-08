@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import CTAButton from "@/components/CTAButton";
 import { motion } from "framer-motion";
+import ScrollReveal from "@/components/ScrollReveal";
 
 interface ServiceCardProps {
   title: string;
@@ -127,15 +128,23 @@ const itemVariants = {
 
 export default function Services() {
   return (
-    <div className="min-h-screen pt-24 pb-12">
+    <div className="min-h-screen pt-24 pb-12 bg-[#0D0D16]">
       {/* Hero Section avec animation */}
       <motion.section 
-        className="py-12 px-6"
+        className="py-12 px-6 relative"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#8A2BE2]/10 to-transparent z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0D0D16] via-[#141420] to-[#8A2BE2]/10 z-0"></div>
+        <div className="absolute right-0 top-0 w-96 h-96">
+          <div className="relative w-full h-full flex items-center justify-center">
+            <div className="absolute w-96 h-96 rounded-full bg-gradient-to-br from-[#8A2BE2]/10 to-[#40E0D0]/10 opacity-50 blur-3xl animate-pulse-slow"></div>
+            <div className="w-80 h-80 rounded-full border border-[#8A2BE2]/10 animate-spin-slower"></div>
+            <div className="absolute w-64 h-64 rounded-full border border-[#40E0D0]/5 animate-spin-reverse-slower"></div>
+            <div className="absolute w-48 h-48 rounded-full border border-[#8A2BE2]/10 animate-spin-slower"></div>
+          </div>
+        </div>
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
@@ -282,83 +291,62 @@ export default function Services() {
         </div>
       </section>
       
-      {/* Section Processus de travail */}
-      <section className="py-24 px-6">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-16 text-center">Mon processus de travail</h2>
-          
-          <div className="relative max-w-3xl mx-auto">
-            {/* Ligne verticale */}
-            <div className="absolute left-[15px] md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#8A2BE2] to-[#40E0D0] transform md:-translate-x-1/2"></div>
+      {/* Process Section */}
+      <ScrollReveal direction="up" distance={20} duration={1000} delay={300}>
+        <section className="py-20 px-6">
+          <div className="container mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">Mon processus de travail</h2>
             
-            {/* Étapes */}
-            <div className="space-y-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[
                 {
-                  step: "Étape 1",
-                  title: "Consultation initiale",
-                  description: "Discussion approfondie pour comprendre vos besoins et objectifs."
+                  step: "1",
+                  title: "Analyse des besoins",
+                  description: "Échange approfondi pour comprendre vos objectifs et définir la meilleure solution."
                 },
                 {
-                  step: "Étape 2",
-                  title: "Proposition et devis",
-                  description: "Élaboration d'une proposition détaillée avec planning et devis précis."
+                  step: "2",
+                  title: "Proposition & Devis",
+                  description: "Élaboration d'une solution détaillée avec planning et devis précis."
                 },
                 {
-                  step: "Étape 3",
-                  title: "Design et maquettage",
-                  description: "Création de maquettes pour visualiser l'interface avant développement."
+                  step: "3",
+                  title: "Design & Maquettes",
+                  description: "Création des maquettes pour visualiser le rendu final avant développement."
                 },
                 {
-                  step: "Étape 4",
+                  step: "4",
                   title: "Développement",
-                  description: "Développement de votre projet avec des points d'étape réguliers."
+                  description: "Développement itératif avec des points d'étape réguliers pour validation."
                 },
                 {
-                  step: "Étape 5",
-                  title: "Tests et optimisation",
-                  description: "Phase de tests approfondis et optimisations finales."
+                  step: "5",
+                  title: "Tests & Optimisation",
+                  description: "Tests approfondis et optimisations pour garantir qualité et performance."
                 },
                 {
-                  step: "Étape 6",
-                  title: "Livraison et formation",
-                  description: "Mise en ligne et formation à l'utilisation de votre solution."
+                  step: "6",
+                  title: "Livraison & Support",
+                  description: "Mise en ligne, formation et support technique continu."
                 }
-              ].map((item, index) => (
-                <motion.div 
+              ].map((step, index) => (
+                <div 
                   key={index}
-                  variants={itemVariants}
-                  className={`relative flex items-center gap-8 ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
+                  className="glass rounded-lg p-5 border border-[#8A2BE2]/20 hover:border-[#40E0D0]/50 transition-all"
                 >
-                  {/* Point sur la timeline */}
-                  <div className="absolute left-0 md:left-1/2 w-8 h-8 bg-[#0A0A0A] border-4 border-[#8A2BE2] rounded-full transform md:-translate-x-1/2 z-10"></div>
-                  
-                  {/* Contenu */}
-                  <motion.div
-                    variants={itemVariants}
-                    className={`flex-1 ${
-                      index % 2 === 0 
-                        ? 'md:pr-16 pl-16 md:pl-0 text-left' 
-                        : 'md:pl-16 pl-16 md:text-right'
-                    }`}
-                  >
-                    <div className="glass rounded-xl p-6 border border-[#8A2BE2]/20 hover:border-[#40E0D0]/50 transition-all">
-                      <span className="text-sm text-[#40E0D0] font-medium">{item.step}</span>
-                      <h3 className="text-xl font-bold mt-2 mb-3">{item.title}</h3>
-                      <p className="text-[#F5F5F5]/70">{item.description}</p>
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="w-8 h-8 rounded-full bg-[#8A2BE2]/20 flex items-center justify-center text-[#40E0D0] font-semibold">
+                      {step.step}
                     </div>
-                  </motion.div>
-                  
-                  {/* Espace pour l'autre côté */}
-                  <div className="hidden md:block flex-1"></div>
-                </motion.div>
+                    <h3 className="text-lg font-bold">{step.title}</h3>
+                  </div>
+                  <p className="text-[#F5F5F5]/70 text-sm">{step.description}</p>
+                </div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
       
       {/* FAQ */}
       <section className="py-12 px-6 bg-black/30">

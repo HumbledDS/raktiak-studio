@@ -86,9 +86,18 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-12">
-      {/* En-tête */}
-      <section className="py-12 px-6">
+    <div className="min-h-screen pt-24 pb-12 bg-[#0D0D16]">
+      {/* Hero Section */}
+      <section className="py-12 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0D0D16] via-[#141420] to-[#8A2BE2]/10 z-0"></div>
+        <div className="absolute left-0 top-0 w-96 h-96 opacity-70">
+          <div className="relative w-full h-full flex items-center justify-center">
+            <div className="absolute w-96 h-96 rounded-full bg-gradient-to-br from-[#8A2BE2]/10 to-[#40E0D0]/10 opacity-50 blur-3xl animate-pulse-slow"></div>
+            <div className="w-80 h-80 rounded-full border border-[#8A2BE2]/10 animate-spin-slower"></div>
+            <div className="absolute w-64 h-64 rounded-full border border-[#40E0D0]/5 animate-spin-reverse-slower"></div>
+            <div className="absolute w-48 h-48 rounded-full border border-[#8A2BE2]/10 animate-spin-slower"></div>
+          </div>
+        </div>
         <div className="container mx-auto text-center">
           <motion.h1 
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
