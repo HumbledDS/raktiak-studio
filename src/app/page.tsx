@@ -9,10 +9,10 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0A0A0A]">
+    <div className="min-h-screen bg-[#0D0D16]">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center relative px-6 pt-24 pb-12">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#1a1a1a] to-[#8A2BE2]/20 z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0D0D16] via-[#141420] to-[#8A2BE2]/10 z-0"></div>
         <div className="container mx-auto relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
@@ -44,16 +44,12 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full md:w-1/2 relative">
-              <div className="relative aspect-square max-w-md mx-auto">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#8A2BE2] to-[#40E0D0] opacity-20 blur-3xl"></div>
-                <Image 
-                  src="/projects/hero_image.png" 
-                  alt="Développement web" 
-                  width={500}
-                  height={500}
-                  className="relative z-10"
-                  priority
-                />
+              <div className="relative aspect-square max-w-md mx-auto flex items-center justify-center">
+                <div className="absolute w-96 h-96 rounded-full bg-gradient-to-br from-[#8A2BE2]/10 to-[#40E0D0]/10 opacity-50 blur-3xl animate-pulse-slow"></div>
+                
+                <div className="w-80 h-80 rounded-full border border-[#8A2BE2]/10 animate-spin-slower"></div>
+                <div className="absolute w-64 h-64 rounded-full border border-[#40E0D0]/5 animate-spin-reverse-slower"></div>
+                <div className="absolute w-48 h-48 rounded-full border border-[#8A2BE2]/10 animate-spin-slower"></div>
               </div>
             </div>
           </div>
@@ -62,7 +58,7 @@ export default function Home() {
 
       {/* Expertise Section */}
       <ScrollReveal direction="up" distance={20} duration={1000}>
-        <section className="py-24 px-6 bg-[#0A0A0A]">
+        <section className="py-24 px-6 bg-[#0D0D16]">
           <div className="container mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">Mon Expertise</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -109,7 +105,7 @@ export default function Home() {
 
       {/* Projects Section */}
       <ScrollReveal direction="up" distance={20} duration={1000} delay={200}>
-        <section className="py-40 px-6 bg-[#0A0A0A]">
+        <section className="py-40 px-6 bg-[#0D0D16]">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center mb-12">
               <h2 className="text-3xl font-bold">Projets phares</h2>
@@ -177,7 +173,7 @@ export default function Home() {
 
       {/* Stats Section */}
       <ScrollReveal direction="up" distance={20} duration={1000} delay={300}>
-        <section className="py-24 px-6 bg-[#0A0A0A]">
+        <section className="py-24 px-6 bg-[#0D0D16]">
           <div className="text-center mb-10">
             <h2 className="text-4xl md:text-5xl font-bold mb-3">En chiffres</h2>
             <p className="text-[#F5F5F5]/70 max-w-2xl mx-auto">
@@ -197,7 +193,7 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <ScrollReveal direction="up" distance={20} duration={1000} delay={400}>
-        <section className="py-32 px-6 bg-[#0A0A0A]">
+        <section className="py-32 px-6 bg-[#0D0D16]">
           <div className="container mx-auto">
             <h1 className="text-3xl md:text-5xl font-bold mb-8 md:mb-16 text-center">Ce que disent mes clients</h1>
             
@@ -227,8 +223,8 @@ export default function Home() {
 
       {/* CTA Section */}
       <ScrollReveal direction="up" distance={20} duration={1000} delay={600}>
-        <section className="py-40 px-6 relative bg-[#0A0A0A]">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#8A2BE2]/20 to-[#0A0A0A] z-0"></div>
+        <section className="py-40 px-6 relative bg-[#0D0D16]">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#8A2BE2]/20 to-[#111111] z-0"></div>
           <div className="container mx-auto relative z-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à donner vie à votre projet ?</h2>
             <p className="text-xl text-[#F5F5F5]/80 mb-8 max-w-2xl mx-auto">
